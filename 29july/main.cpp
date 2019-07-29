@@ -8,5 +8,10 @@ int main()
     std::cout << "Hello world!" << std::endl;
     std::cout << "Hello world! \n" ;
     std::cout << "Hello world! \x0A" ;
+
+
+    int number;
+    std::cin>> number;
+    std::cout << "you typed " << number << "!" << std::endl;
     return 0;
 }
