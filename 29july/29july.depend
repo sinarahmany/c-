@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1564428770 source:c:\work\c++(code blocks)\29july\main.cpp
+1564429872 source:c:\work\c++(code blocks)\29july\main.cpp
 	<iostream>
 	<string>
 	"functions.h"
 
-1564428600 source:c:\work\c++(code blocks)\29july\src\functions.cpp
+1564428795 source:c:\work\c++(code blocks)\29july\src\functions.cpp
 	"functions.h"
+	<iostream>
 
 1564428770 c:\work\c++(code blocks)\29july\include\functions.h
 
