@@ -18,6 +18,10 @@ int main()
     int number2;
     std::cin >> number2;
     std::cout << "Your numbers are "<< number << "," << number2 << std::endl;
-    std::cout << "the addition of those numbers are " << number+number2 <<std::endl;
+    std::cout << "the addition of those numbers is " << number+number2 <<std::endl;
+    //dynamic casting
+    std::cout << "the average of those numbers is " << (double)(number+number2)/2 <<std::endl;
+    //it`s more secure static casting
+    std::cout << "the average of those numbers is " << (static_cast<double>(number+number2)/2) <<std::endl;
     return 0;
 }
