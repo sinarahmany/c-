@@ -33,7 +33,31 @@ int main()
     std::cout <<"Hello, what is your name ? " <<std::endl;
     std::string name;
     std::cin >> name;
-    std::cout <<"Welcome ,Dear" << name <<std::endl;
+    std::cout <<"Welcome ,Dear " << name <<std::endl;
+
+
+    std::string string1{};//empty
+    std::string string2{"ITD Canada"};
+    std::string string3{string2};
+    std::string string4{"ITD Canada",5};
+    std::string string5{string3,3,8};
+    std::string string6(5, 'O');
+
+    std::cout << string1 << std::endl;
+    std::cout << string2 << std::endl;
+    std::cout << string3 << std::endl;
+    std::cout << string4 << std::endl;
+    std::cout << string5 << std::endl;
+    std::cout << string6 << std::endl;
+
+    char string7[10];
+    //string7 = "ITDCanada"; illegal
+//    strcpy(string7,"ITDCanada");
+    char string8[] = "assign anything to here";//the last char is \0
+
+    for(int i=0 ;i < sizeof(string8)/sizeof(char); i++){
+        std::cout << string8[i] << " " ;
+    }
 
 
 
