@@ -29,5 +29,13 @@ int main()
     unsigned int max = 1;
 
 
+    //C++11
+    std::cout <<"Hello, what is your name ? " <<std::endl;
+    std::string name;
+    std::cin >> name;
+    std::cout <<"Welcome ,Dear" << name <<std::endl;
+
+
+
     return 0;
 }
