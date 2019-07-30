@@ -1,6 +1,10 @@
 #include "functions.h"
 
 #include <iostream>
+//global variables
+const int stackSize = 100;
+int stackArr[stackSize];
+int ToS {0};
 void somedatatypes(){
 
     //All 3 has the same output
@@ -58,6 +62,6 @@ void somedatatypes(){
         std::cout << string8[i] << " " ;
     }
 
-
-
 }
+
+
