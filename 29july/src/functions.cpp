@@ -2,9 +2,9 @@
 
 #include <iostream>
 //global variables
-const int stackSize = 5;
-int stackArr[stackSize];
-int ToS {0};
+const int stackSizeStaticArr = 5;
+int StaticStackArr[stackSizeStaticArr];
+int stackToS {-1};
 void somedatatypes(){
 
     //All 3 has the same output
@@ -65,14 +65,29 @@ void somedatatypes(){
 }
 
 bool push (int val){
-    if(ToS >=stackSize){
+    if(stackToS >=stackSizeStaticArr-1){
         std::cout << "sorry stack is full!" << std::endl;
         std::cout << " " << std::endl;
         return false;
     }
 
-    stackArr[ToS] = val;
-    ToS+=1;
+    StaticStackArr[stackToS] = val;
+    stackToS+=1;
     return true;
 }
+void pop(){
+    if(stackToS < 0){
+        std::cout << "stack is empty " << std::endl;
+        return
+    }
 
+}
+prinStack(){
+    if(stackToS < 0 ){
+        std::cout << "stack is empty " << std::endl;
+    }
+}
+
+void message(string msg){
+    std::cout << msg << std::endl;
+}

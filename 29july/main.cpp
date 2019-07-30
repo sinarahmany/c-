@@ -25,7 +25,7 @@ bool flag=true;
             push(val);
             break;
         case 2 :
-
+            pop();
             break;
         case 3 :
             //
