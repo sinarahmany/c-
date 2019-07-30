@@ -2,7 +2,7 @@
 
 #include <iostream>
 //global variables
-const int stackSize = 100;
+const int stackSize = 5;
 int stackArr[stackSize];
 int ToS {0};
 void somedatatypes(){
@@ -64,4 +64,15 @@ void somedatatypes(){
 
 }
 
+bool push (int val){
+    if(ToS >=stackSize){
+        std::cout << "sorry stack is full!" << std::endl;
+        std::cout << " " << std::endl;
+        return false;
+    }
+
+    stackArr[ToS] = val;
+    ToS+=1;
+    return true;
+}
 

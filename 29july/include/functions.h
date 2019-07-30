@@ -5,7 +5,7 @@
 #pragma once
 
 void somedatatypes(void);
-void push(int val);
+bool push(int val);
 void pop();
 void prinStack();
 

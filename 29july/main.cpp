@@ -41,14 +41,4 @@ bool flag=true;
 
     return 0;
 }
-void push(int val){
 
-}
-
-void pop(){
-
-}
-
-void printStack(){
-
-}
