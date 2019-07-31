@@ -91,7 +91,7 @@ void PrintStackWithPointer()
         }
         currentElement-=1;
     }
-    std::cout <<
+    //std::cout <<
 }
 
 
