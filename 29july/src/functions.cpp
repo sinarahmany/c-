@@ -86,10 +86,12 @@ void PrintStackWithPointer()
     {
         if (*currentElement != 0)
         {
-            std::cout << *currentElement << std::endl;
+            std::cout << *currentElement << "   ";
+            PopWithPointer();
         }
         currentElement-=1;
     }
+    std::cout <<
 }
 
 
