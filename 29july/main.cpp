@@ -9,26 +9,29 @@
 
 using namespace std;
 
-void bla_bla();
+string bla_bla(std::string strInput);
 
 int main()
 {
 
-bla_bla();
+    string beeeep;
+    std::cin >> beeeep ;
+    std::cout << bla_bla(beeeep);
 
     //stackMenuWithPointer();
 
     return 0;
 }
-void bla_bla(){
-    char arri[20];
-    std::cin>>arri;
-    std::cout<<sizeof(arri)<<std::endl;
-    for(int i =0;i<sizeof(arri);i++){
 
-    std::cout<<arri[i]<<"*";
 
+string bla_bla(std::string strInput){
+    int n = strInput.length();
+string arru="";
+    for(int i = n-1;i>=0;i --){
+        arru+= strInput[i];
 
     }
+        return arru;
+
 }
 
