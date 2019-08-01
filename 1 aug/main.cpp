@@ -42,11 +42,16 @@ int main()
 
         for (int j=0;j<11;j++){
             multiN[i][j]=j*i;
-            printf("%5d", multiN[i][j]);
+            if(i==0){
+                printf("%5d",j);
+            }
+            else if(j==0){
+                printf("%5d",i);
+            }
+            else{printf("%5d", multiN[i][j]);}
 
         }
         std::cout << std::endl ;
-
     }
 
 
