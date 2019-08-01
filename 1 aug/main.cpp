@@ -35,12 +35,11 @@ int main()
 //    }
     //**********************************************************
     int multiN[11][11];
-    int i2=1;
-    int i3=1;
-    for (int i=0;i<11;i++){
+    int rows = sizeof(multiN) / sizeof(multiN[0]);
+    int columns = sizeof(multiN[0]) / sizeof(int);
+    for (int i=0;i<rows;i++){
 
-
-        for (int j=0;j<11;j++){
+        for (int j=0;j<columns;j++){
             multiN[i][j]=j*i;
             if(i==0){
                 printf("%5d",j);
@@ -49,7 +48,6 @@ int main()
                 printf("%5d",i);
             }
             else{printf("%5d", multiN[i][j]);}
-
         }
         std::cout << std::endl ;
     }
