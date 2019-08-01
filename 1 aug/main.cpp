@@ -14,7 +14,7 @@ int main()
 {
     int x = 5;
     int y = 4;
-   // std::cout << add(x,y) <<std::endl;
+    std::cout << add(x,y) <<std::endl;
 
     int i,j,k;
     i=5 ; //this will be pass by value
@@ -27,5 +27,12 @@ int main()
     //the value of j is modified with the pass ny reference function
     std::cout << "value of j is : " << j << std::endl; //4
 
+    //**********************************************************
+    double numbers[6] {1.0,2.0,3.0,4.0,5.0,6.0};
+    //for each in loop in c++ !!
+    for(double number :numbers){
+        std::cout << number <<std::endl;
+    }
+    //**********************************************************
     return 0;
 }
