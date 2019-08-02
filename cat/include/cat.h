@@ -1,5 +1,7 @@
 #ifndef CAT_H
 #define CAT_H
+#include <iostream>
+#include <string>
 
 
 class cat

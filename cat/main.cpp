@@ -1,9 +1,11 @@
 #include <iostream>
+#include <string>
+#include <cat.h>
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    cat blablaCat = new cat();
     return 0;
 }
