@@ -6,6 +6,7 @@
 
 class cat
 {
+    public:
     std::string name;
     std::string color;
     bool single;
