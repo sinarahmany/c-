@@ -9,18 +9,19 @@ b+=2;
 c+=3;
 return a+b+c;
 }
+int fibo(int order);
 
 int main()
 {
-    int x = 5;
-    int y = 4;
-   // std::cout << add(x,y) <<std::endl;
-
-    int i,j,k;
-    i=5 ; //this will be pass by value
-    j=4 ; //this will be pass by ref
-    k=2 ;
-    //pass bt reference will check the address in the RAM
+//    int x = 5;
+//    int y = 4;
+//   // std::cout << add(x,y) <<std::endl;
+//
+//    int i,j,k;
+//    i=5 ; //this will be pass by value
+//    j=4 ; //this will be pass by ref
+//    k=2 ;
+//    //pass bt reference will check the address in the RAM
 //    std::cout << modify(i,j,k) <<std:: endl;
     //the value of i is not modified with the pass by val function
 //    std::cout << "value of i is :" << i << std::endl;//4
@@ -34,24 +35,35 @@ int main()
 //        std::cout << number <<std::endl;
 //    }
     //**********************************************************
-    int multiN[11][11];
-    int rows = sizeof(multiN) / sizeof(multiN[0]);
-    int columns = sizeof(multiN[0]) / sizeof(int);
-    for (int i=0;i<rows;i++){
+//    int multiN[11][11];
+//    int rows = sizeof(multiN) / sizeof(multiN[0]);
+//    int columns = sizeof(multiN[0]) / sizeof(int);
+//    for (int i=0;i<rows;i++){
+//
+//        for (int j=0;j<columns;j++){
+//            multiN[i][j]=j*i;
+//            if(i==0){
+//                printf("%5d",j);
+//            }
+//            else if(j==0){
+//                printf("%5d",i);
+//            }
+//            else{printf("%5d", multiN[i][j]);}
+//        }
+//        std::cout << std::endl ;
+//    }
 
-        for (int j=0;j<columns;j++){
-            multiN[i][j]=j*i;
-            if(i==0){
-                printf("%5d",j);
-            }
-            else if(j==0){
-                printf("%5d",i);
-            }
-            else{printf("%5d", multiN[i][j]);}
+    //***************************************************************
+    int fibo(int order){
+        if(order == 0){
+            return 0 ;
         }
-        std::cout << std::endl ;
+        if(order==1){
+
+            return 1;
+        }
+        return fibo(order-1) + fibo(order-2);
     }
-
-
+    std::cout << fibo(4) << std::endl;
     return 0;
 }
