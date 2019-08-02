@@ -9,7 +9,7 @@ b+=2;
 c+=3;
 return a+b+c;
 }
-int fibo(int order);
+long long int fibo(unsigned int order);
 
 int main()
 {
@@ -54,16 +54,22 @@ int main()
 //    }
 
     //***************************************************************
-    int fibo(int order){
-        if(order == 0){
-            return 0 ;
-        }
-        if(order==1){
-
-            return 1;
-        }
-        return fibo(order-1) + fibo(order-2);
-    }
-    std::cout << fibo(4) << std::endl;
+//   long long int fibo(unsigned int order){
+//        if(order == 0){
+//            return 0 ;
+//        }
+//        if(order==1){
+//
+//            return 1;
+//        }
+//        return fibo(order-1) + fibo(order-2);
+//    }
+//    std::cout << fibo(4) << std::endl;
+//    //***********************************************************
+//    long long int factorial(unsigned int num){
+//        if(number<=1){
+//            return 1;
+//        }
+//    }
     return 0;
 }
