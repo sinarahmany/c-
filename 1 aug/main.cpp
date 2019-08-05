@@ -35,23 +35,23 @@ int main()
 //        std::cout << number <<std::endl;
 //    }
     //**********************************************************
-//    int multiN[11][11];
-//    int rows = sizeof(multiN) / sizeof(multiN[0]);
-//    int columns = sizeof(multiN[0]) / sizeof(int);
-//    for (int i=0;i<rows;i++){
-//
-//        for (int j=0;j<columns;j++){
-//            multiN[i][j]=j*i;
-//            if(i==0){
-//                printf("%5d",j);
-//            }
-//            else if(j==0){
-//                printf("%5d",i);
-//            }
-//            else{printf("%5d", multiN[i][j]);}
-//        }
-//        std::cout << std::endl ;
-//    }
+    int multiN[11][11];
+    int rows = sizeof(multiN) / sizeof(multiN[0]);
+    int columns = sizeof(multiN[0]) / sizeof(int);
+    for (int i=0;i<rows;i++){
+
+        for (int j=0;j<columns;j++){
+            multiN[i][j]=j*i;
+            if(i==0){
+                printf("%5d",j);
+            }
+            else if(j==0){
+                printf("%5d",i);
+            }
+            else{printf("%5d", multiN[i][j]);}
+        }
+        std::cout << std::endl ;
+    }
 
     //***************************************************************
 //   long long int fibo(unsigned int order){

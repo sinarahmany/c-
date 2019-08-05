@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    cat *blablaCat = new cat();
-    blablaCat->eat();
+    cat blablaCat;
+    blablaCat.eat();
     return 0;
 }

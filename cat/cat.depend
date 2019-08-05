@@ -2,7 +2,12 @@
 1564774839 source:c:\work\c++(code blocks)\cat\src\cat.cpp
 	"cat.h"
 
-1564775223 c:\work\c++(code blocks)\cat\include\cat.h
+1564776147 c:\work\c++(code blocks)\cat\include\cat.h
 	<iostream>
 	<string>
+
+1564775490 source:c:\work\c++(code blocks)\cat\main.cpp
+	<iostream>
+	<string>
+	<cat.h>
 

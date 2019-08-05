@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1564689200 source:c:\users\sina\downloads\compressed\cplusplus-summer-2019-418e9ed3428fae18eb456939466a0cf53c5ec4cb\cplusplus-summer-2019-418e9ed3428fae18eb456939466a0cf53c5ec4cb\basic101\basic101\morefunctions.cpp
+	"moreFunctions.hpp"
+	<string>
+	<iostream>
+
+1564689200 c:\users\sina\downloads\compressed\cplusplus-summer-2019-418e9ed3428fae18eb456939466a0cf53c5ec4cb\cplusplus-summer-2019-418e9ed3428fae18eb456939466a0cf53c5ec4cb\basic101\basic101\morefunctions.hpp
+	<stdio.h>
+	<string>
+
+1564988874 source:c:\work\c++(code blocks)\assignmentc++\main.cpp
+	<iostream>
+	<string>
+
