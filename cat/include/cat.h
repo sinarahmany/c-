@@ -2,8 +2,6 @@
 #define CAT_H
 #include <iostream>
 #include <string>
-
-
 class cat
 {
     public:
@@ -19,9 +17,6 @@ class cat
         void sleep(){
             std::cout <<"i`m sleeping call me later." << std::endl;
         }
-        void eat(){
-            std::cout << "Hmmmm i like tuna" << std::endl;
-        }
+        void eat();
 };
-
 #endif // CAT_H
