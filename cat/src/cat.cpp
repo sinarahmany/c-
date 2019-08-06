@@ -1,6 +1,6 @@
 #include "cat.h"
-void cat::eat(){
+//void cat::eat(){
 
 
 
-}
+//}
