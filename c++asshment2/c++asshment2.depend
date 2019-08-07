@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1565206472 source:c:\work\c++(code blocks)\c++asshment2\main.cpp
+	<iostream>
+	<SinaIsOnDate.h>
+
+1565206426 c:\work\c++(code blocks)\c++asshment2\include\sinaisondate.h
+	<stdio.h>
+	<iostream>
+	<string>
+

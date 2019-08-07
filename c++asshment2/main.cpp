@@ -1,4 +1,5 @@
 #include <iostream>
+#include <SinaIsOnDate.h>
 
 using namespace std;
 
