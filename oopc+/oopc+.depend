@@ -1,11 +1,18 @@
 # depslib dependency file v1.0
-1565197677 source:c:\work\c++(code blocks)\oopc+\src\cat.cpp
+1565199045 source:c:\work\c++(code blocks)\oopc+\src\cat.cpp
 	"Cat.h"
 	<string>
 	<ctype.h>
 
-1565197677 c:\work\c++(code blocks)\oopc+\include\cat.h
+1565198925 c:\work\c++(code blocks)\oopc+\include\cat.h
 	<stdio.h>
 	<iostream>
 	<string>
+
+1565197724 source:c:\work\c++(code blocks)\oopc+\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<ctype.h>
+	<Cat.h>
 

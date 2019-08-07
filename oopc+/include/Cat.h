@@ -21,6 +21,7 @@ class Cat{
         int health;
 
     public :
+        static int count;
         //default constructor
         Cat();
         //overloaded constructor
@@ -33,7 +34,9 @@ class Cat{
 
         //destructor
         ~Cat();
-
+        int static howManyObject(){
+            return count;
+        }
         //setters
         void setName(std::string name);
         void setColor(std::string color);

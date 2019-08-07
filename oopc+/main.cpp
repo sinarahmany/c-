@@ -26,13 +26,13 @@ int main() {
     Cat sylvester {"Sylvester","White",true, 5.4,95};
     sylvester.introduceYourself();
     sylvester.sleep();
-
+    std::cout << "there are " << Cat::count << " cats" << std::endl;
     std::cout << "_____________" << std::endl;
     Cat kit{"Homer", 100 };
     kit.introduceYourself();
     kit.eat();
     kit.jump();
-
+    std::cout << "there are " << Cat::count << " cats" << std::endl;
     std::cout << "_____________" << std::endl;
     Cat copyFluffy(fluffy);
     copyFluffy.introduceYourself();

@@ -1,18 +1,8 @@
 #include "Cat.h"
-
-//
-//  Cat.cpp
-//  basic101
-//
-//  Created by Saygin Guven on 2019-08-02.
-//  Copyright © 2019 Saygin Guven. All rights reserved.
-//
-
-
 #include <string>
 #include <ctype.h>
 
-
+int Cat::count = 0;
 Cat::Cat() :
 Cat("unknown","white",true,0,0){
     std::cout << " default constructor called " << std::endl;
@@ -33,8 +23,9 @@ Cat::Cat(std::string name, std::string color, bool single,
     this->single = single;
     this->weight = weight;
     this->health = health;
+count+=1;
 }
-
+//increament whenever a obj is created
 //copy constructor
 Cat::Cat(const Cat &obj){
     std::cout << " copy constructor called " << std::endl;
