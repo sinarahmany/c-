@@ -11,7 +11,7 @@ class cat
         double weight;
         int health;
 
-    //incase the function don`t mixed up with the other functions from interface we put cat:: before function
+        //incase the function don`t mixed up with the other functions from interface we put cat:: before function
         void jump();
 
         void sleep(){

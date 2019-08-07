@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1565197677 source:c:\work\c++(code blocks)\oopc+\src\cat.cpp
+	"Cat.h"
+	<string>
+	<ctype.h>
+
+1565197677 c:\work\c++(code blocks)\oopc+\include\cat.h
+	<stdio.h>
+	<iostream>
+	<string>
+
