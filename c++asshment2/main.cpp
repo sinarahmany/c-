@@ -1,10 +1,14 @@
 #include <iostream>
+#include <string>
 #include <SinaIsOnDate.h>
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    cout << "Goodbye world!" << endl;
+
+    SinaIsOnDate nn;
+    nn.whatTimeIsIt();
+
 }
