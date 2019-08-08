@@ -1,5 +1,5 @@
 #include "SinaIsOnDate.h"
-
+//declaring getters and setters
 int SinaIsOnDate::getDay(){
     return day;
 }
@@ -50,7 +50,13 @@ SinaIsOnDate:: SinaIsOnDate(int Years, int Month, int day)
         this->Years = 1;
     }
 }
+SinaIsOnDate::SinaIsOnDate(const SinaIsOnDate &obj){
+    std::cout << " copy constructor called " << std::endl;
+    this->Years = obj.Years;
+    this->Month = obj.Month;
+    this->day = obj.day;
 
+}
 void SinaIsOnDate::whatTimeIsIt(){
 
     std::string formattedYears;
@@ -74,5 +80,27 @@ void SinaIsOnDate::whatTimeIsIt(){
 
     std::cout << formattedYears << "/" << formattedMonth << "/" << formattedDay << std::endl;
 
+}
+void SinaIsOnDate::whatTimeWasIt(){
+
+    std::string formattedYears;
+    std::string formattedMonth;
+    std::string formattedDay;
+
+
+    formattedYears = std::to_string(Years);
+    formattedMonth = std::to_string(Month);
+    formattedDay = std::to_string(day);
+
+
+    std::cout << formattedYears << " Years," << formattedMonth << " Months," << formattedDay << " Days,"<< std::endl;
+}
+void SinaIsOnDate::whatTimeWillIt(){
+    std::string formattedDay;
+
+    day=(Years*365)+(Month*30);
+    formattedDay = std::to_string(day);
+
+    std::cout << formattedDay << " Days, More than the first day of calendar"<< std::endl;
 }
 
