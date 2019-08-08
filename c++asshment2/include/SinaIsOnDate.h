@@ -8,16 +8,12 @@
 class SinaIsOnDate
 {
     private:
-        std::string day; // AM or PM
-        int second;
+        int day;
         int Month;
         int Years;
     public:
-        std::string getDay();
-        void setDay(std::string day);
-
-        int getSecond();
-        void setSecond(int second);
+        int getDay();
+        void setDay(int day);
 
         int geMonth();
         void setMonth(int Month);
@@ -27,15 +23,13 @@ class SinaIsOnDate
         //default constructor
         SinaIsOnDate();
         //overloaded constructor
-        SinaIsOnDate(std::string day, int Years, int Month, int second);
-        //default parameter for day is "AM"
-        //if you instantiate your object with 2 parameters day will be automatically "AM"
-        //if you instantiate your object with 3 parameters day will be assigned whatever the value is "AM" or "PM"
-        SinaIsOnDate(int Years, int Month, std::string day = "AM");
+        //SinaIsOnDate(int day, int Years, int Month);
+
+        SinaIsOnDate(int Years, int Month, int day );
 
        // ~SinaIsOnDate();
 
-    void whatTimeIsIt();
+        void whatTimeIsIt();
 };
 
 #endif // SINAISONDATE_H

@@ -1,18 +1,10 @@
 #include "SinaIsOnDate.h"
 
-std::string SinaIsOnDate::getDay(){
+int SinaIsOnDate::getDay(){
     return day;
 }
-void SinaIsOnDate::setDay(std::string day){
+void SinaIsOnDate::setDay(int day){
     this->day = day;
-}
-
-int SinaIsOnDate::getSecond(){
-    return second;
-}
-
-void SinaIsOnDate::setSecond(int second){
-    this->second = second;
 }
 
 int SinaIsOnDate::geMonth(){
@@ -32,33 +24,17 @@ void SinaIsOnDate::setYears(int Years){
 }
 //default constructor
 SinaIsOnDate::SinaIsOnDate() :
-SinaIsOnDate("AM", 0,0,0){
+SinaIsOnDate(0, 0,0){
 
 }
 //overloaded constructor
-SinaIsOnDate:: SinaIsOnDate(int Years, int Month, std::string day)
-: SinaIsOnDate(day,Years,Month,0){
-
-}
-
-SinaIsOnDate::SinaIsOnDate(std::string day, int hour, int Month, int second){
-
+SinaIsOnDate:: SinaIsOnDate(int Years, int Month, int day)
+{
     //check and convert the day to upper case
-    std::locale loc;
-    std::string temp;
-    for (std::string::size_type i=0; i<day.length(); ++i)
-        temp += std::toupper(day[i],loc);
-
-    if(temp == "AM" || temp == "PM"){
-        this->day = temp;
-    } else{
-        this->day = "AM";
-    }
-
-    if(second >=0 && second <60){
-        this->second = second;
-    } else{
-        this->second = 0;
+    if(day >=1 && day <= 30){
+        this->day = day;
+    }else {
+        this->day = 1;
     }
 
 
@@ -68,22 +44,23 @@ SinaIsOnDate::SinaIsOnDate(std::string day, int hour, int Month, int second){
         this->Month = 1;
     }
 
-    if(Years >=0 && Years <= 2019){
+    if(Years >=1 && Years <= 2019){
         this->Years = Years;
     }else {
-        this->Years = 0;
+        this->Years = 1;
     }
-
 }
+
 void SinaIsOnDate::whatTimeIsIt(){
-    //08            07               01                AM
+
     std::string formattedYears;
     std::string formattedMonth;
-    std::string formattedSecond;
+    std::string formattedDay;
+
 
     formattedYears = std::to_string(Years);
     formattedMonth = std::to_string(Month);
-    formattedSecond = std::to_string(second);
+    formattedDay = std::to_string(day);
 
 
     if(Years < 10){
@@ -94,10 +71,8 @@ void SinaIsOnDate::whatTimeIsIt(){
         formattedMonth = "0" + std::to_string(Month);
     }
 
-    if(second < 10){
-        formattedSecond = "0" + std::to_string(second);
-    }
 
-    std::cout << formattedYears << "Years ," << formattedMonth << "Months ," << formattedSecond << " " << day << std::endl;
+    std::cout << formattedYears << "/" << formattedMonth << "/" << formattedDay << std::endl;
 
 }
+
