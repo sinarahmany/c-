@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1514144174 source:c:\work\c++(code blocks)\assigment3cplus\main.cpp
+	<iostream>
+
+1565369677 source:c:\work\c++(code blocks)\assigment3cplus\src\simpledate.cpp
+	"SimpleDate.h"
+
+1565369677 c:\work\c++(code blocks)\assigment3cplus\include\simpledate.h
+
+1565369655 source:c:\work\c++(code blocks)\assigment3cplus\src\simpletime.cpp
+	"SimpleTime.h"
+
+1565369655 c:\work\c++(code blocks)\assigment3cplus\include\simpletime.h
+
+1565369703 source:c:\work\c++(code blocks)\assigment3cplus\src\transaction.cpp
+	"Transaction.h"
+
+1565369703 c:\work\c++(code blocks)\assigment3cplus\include\transaction.h
+
