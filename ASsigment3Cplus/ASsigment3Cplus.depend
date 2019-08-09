@@ -7,10 +7,14 @@
 
 1565369677 c:\work\c++(code blocks)\assigment3cplus\include\simpledate.h
 
-1565369655 source:c:\work\c++(code blocks)\assigment3cplus\src\simpletime.cpp
+1565375215 source:c:\work\c++(code blocks)\assigment3cplus\src\simpletime.cpp
 	"SimpleTime.h"
+	<string>
+	<iostream>
 
-1565369655 c:\work\c++(code blocks)\assigment3cplus\include\simpletime.h
+1565375748 c:\work\c++(code blocks)\assigment3cplus\include\simpletime.h
+	<string>
+	<iostream>
 
 1565369703 source:c:\work\c++(code blocks)\assigment3cplus\src\transaction.cpp
 	"Transaction.h"
