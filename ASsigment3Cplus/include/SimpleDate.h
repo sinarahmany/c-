@@ -30,6 +30,8 @@ class SimpleDate
         SimpleDate();
         //overloaded constructor
         SimpleDate(int Day,int Month,int Year,std::string DayOfWeek);
+        void print();
+        bool checkDate(int, int, int);
 
 
 
