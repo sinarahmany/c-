@@ -2,17 +2,21 @@
 1514144174 source:c:\work\c++(code blocks)\assigment3cplus\main.cpp
 	<iostream>
 
-1565369677 source:c:\work\c++(code blocks)\assigment3cplus\src\simpledate.cpp
+1565550241 source:c:\work\c++(code blocks)\assigment3cplus\src\simpledate.cpp
 	"SimpleDate.h"
+	<string>
+	<iostream>
 
-1565369677 c:\work\c++(code blocks)\assigment3cplus\include\simpledate.h
+1565550241 c:\work\c++(code blocks)\assigment3cplus\include\simpledate.h
+	<string>
+	<iostream>
 
-1565375215 source:c:\work\c++(code blocks)\assigment3cplus\src\simpletime.cpp
+1565379288 source:c:\work\c++(code blocks)\assigment3cplus\src\simpletime.cpp
 	"SimpleTime.h"
 	<string>
 	<iostream>
 
-1565375748 c:\work\c++(code blocks)\assigment3cplus\include\simpletime.h
+1565379289 c:\work\c++(code blocks)\assigment3cplus\include\simpletime.h
 	<string>
 	<iostream>
 

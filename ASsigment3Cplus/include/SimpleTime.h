@@ -8,11 +8,6 @@
 class SimpleTime
 {
     public:
-        //default constructor
-        SimpleTime();
-        //overloaded constructor
-        Simpletime(int,int,int,std::string string);
-
         //setters
         void setHour(int Hour);
         void setMinute(int Minute);
@@ -25,6 +20,12 @@ class SimpleTime
         int getMinute();
         int getSecond();
         std::string getZone();
+
+        //default constructor
+        SimpleTime();
+        //overloaded constructor
+        Simpletime(int Hour,int Minute,int Second,std::string Zone);
+
 
         //Functions
         void printCivilian();
