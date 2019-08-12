@@ -17,7 +17,8 @@ int main()
     std::cout << "Line is : "<<line <<std::endl;
     std::cout <<"Best Number is : " <<bestnumber <<std::endl;
     std::cout <<"Coffee price is : " << coffeePrice <<std::endl;
-    std::cout << "isitTrue = "<< isItTrue <<std::endl;
+    //bool alpha iin the line below changes the value of bool from 0 to true or false
+    std::cout << "isitTrue = "<< std::boolalpha <<isItTrue <<std::endl;
 
 
     return 0;
