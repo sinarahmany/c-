@@ -1,4 +1,5 @@
-whatsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!
-36
-3.75
-false
+sina 20 1
+romi 40 1
+jennifer 50 0
+mia 27 1
+alex 990 0
