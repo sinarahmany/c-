@@ -1,16 +1,17 @@
 #ifndef TRANSACTION_H
 #define TRANSACTION_H
-
+#include <string>
+#include <iostream>
 
 class Transaction
 {
     public:
-        Transaction();
-        virtual ~Transaction();
 
-    protected:
 
     private:
+        int Amount;
+        std::string AcountType;
+
 };
 
 #endif // TRANSACTION_H
