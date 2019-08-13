@@ -9,34 +9,10 @@ using namespace std;
 void f1();
 void f2();
 void f3();
+void textDeatails();
 int main()
 {
-    //it just shows the upper case words
-    /*std::string str {"Let`s check and use cType header for finding some staff in here!! "};
-    for(int i = 0;i<str.length();i++){
-        if(isupper(str[i])){
-            std::cout << str[i]<< " - ";
-        }
-    }
-    */
-    std::ifstream readobj;
-    readobj.open("littleRed.txt");
-    std::string Name;
-    int upper=0;
-    int spacecounter=0;
-    char c;
-    while(readobj.get(c)){
-        if(isupper(c)){
-            upper++;
-
-        }
-        if(isspace(c)){
-           spacecounter++;
-        }
-    }
-    std::cout<<"how many upper? "<<upper<<std::endl;
-    std::cout<<"how many space? "<<spacecounter;
-
+    textDeatails();
     return 0;
 }
 
@@ -121,4 +97,51 @@ void f3(){
     }
 
 //use get file cause it reads the whole line and then go to next line but readobj.eof goes word by word and here we don`t want that
+}
+void textDeatails (){
+    //it just shows the upper case words
+    /*std::string str {"Let`s check and use cType header for finding some staff in here!! "};
+    for(int i = 0;i<str.length();i++){
+        if(isupper(str[i])){
+            std::cout << str[i]<< " - ";
+        }
+    }
+    */
+    //**********************************************************************************
+    int intDigit=0, intSpace=0, intPunchuation=0, intUpper=0, intLower=0, intAlphaNum=0, intWord=0;
+    char c;
+    std::string strSLine;
+    std::ofstream dFile;
+    dFile.open("dFile.txt"); //, std::ios_base::app);
+    std::ifstream sFile ("littleRed.txt");
+    if (sFile.is_open()){
+        while(sFile.get(c)){
+            if (isdigit(c)) intDigit++;
+            if (isspace(c)) intSpace++;
+            if (ispunct(c)) intPunchuation++;
+            if (isupper(c)) intUpper++;
+            if (islower(c)) intLower++;
+            if (isalpha(c)) intAlphaNum++;
+            //if (c) {intWord++};
+        }
+            dFile<<"1- Digit Count:          "<<std::setw(4)<<intDigit<<std::right<<std::endl;
+            dFile<<"2- intSpace Count:       "<<std::setw(4)<<intSpace<<std::right<<std::endl;
+            dFile<<"3- intPunchuation Count: "<<std::setw(4)<<intPunchuation<<std::right<<std::endl;
+            dFile<<"4- intUpper Count:       "<<std::setw(4)<<intUpper<<std::right<<std::endl;
+            dFile<<"5- intLower Count:       "<<std::setw(4)<<intLower<<std::right<<std::endl;
+            dFile<<"6- intAlphaNum Count:    "<<std::setw(4)<<intAlphaNum<<std::right<<std::endl;
+            dFile<<"7- Word Count:           "<<std::setw(4)<<intSpace<<std::right<<std::endl;
+            //-------
+            std::cout<<"1- Digit Count:          "<<std::setw(4)<<intDigit<<std::right<<std::endl;
+            std::cout<<"2- intSpace Count:       "<<std::setw(4)<<intSpace<<std::right<<std::endl;
+            std::cout<<"3- intPunchuation Count: "<<std::setw(4)<<intPunchuation<<std::right<<std::endl;
+            std::cout<<"4- intUpper Count:       "<<std::setw(4)<<intUpper<<std::right<<std::endl;
+            std::cout<<"5- intLower Count:       "<<std::setw(4)<<intLower<<std::right<<std::endl;
+            std::cout<<"6- intAlphaNum Count:    "<<std::setw(4)<<intAlphaNum<<std::right<<std::endl;
+            std::cout<<"7- Word Count:           "<<std::setw(4)<<intSpace<<std::right<<std::endl;
+        sFile.close();
+    }
+    else std::cout << "Unable to open file";
+    dFile.close();
+
 }

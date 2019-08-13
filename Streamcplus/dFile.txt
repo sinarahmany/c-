@@ -1,0 +1,7 @@
+1- Digit Count:             0
+2- intSpace Count:       1553
+3- intPunchuation Count:  315
+4- intUpper Count:        227
+5- intLower Count:       5970
+6- intAlphaNum Count:    6197
+7- Word Count:           1553
