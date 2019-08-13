@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1565717880 source:c:\work\c++(code blocks)\streamcplus\main.cpp
+1565721417 source:c:\work\c++(code blocks)\streamcplus\main.cpp
 	<iostream>
 	<string>
 	<fstream>
 	<iomanip>
+	<ctype.h>
+	<cstring>
 

@@ -2,6 +2,8 @@
 #include <string>
 #include <fstream>
 #include <iomanip>
+#include <ctype.h>
+#include <cstring>
 
 using namespace std;
 void f1();
@@ -9,9 +11,31 @@ void f2();
 void f3();
 int main()
 {
+    //it just shows the upper case words
+    /*std::string str {"Let`s check and use cType header for finding some staff in here!! "};
+    for(int i = 0;i<str.length();i++){
+        if(isupper(str[i])){
+            std::cout << str[i]<< " - ";
+        }
+    }
+    */
+    std::ifstream readobj;
+    readobj.open("littleRed.txt");
+    std::string Name;
+    int upper=0;
+    int spacecounter=0;
+    char c;
+    while(readobj.get(c)){
+        if(isupper(c)){
+            upper++;
 
-
-
+        }
+        if(isspace(c)){
+           spacecounter++;
+        }
+    }
+    std::cout<<"how many upper? "<<upper<<std::endl;
+    std::cout<<"how many space? "<<spacecounter;
 
     return 0;
 }
