@@ -4,39 +4,58 @@
 #include <iomanip>
 
 using namespace std;
-
+void f1();
+void f2();
+void f3();
 int main()
 {
-    std::ifstream Readobj;
 
 
-//    Readobj.open("main.txt");
-//
-//
-//    std::string Name;
-//    int Age;
-//    bool isItTrue;
-//
-//    while(!Readobj.eof()){
-//        Readobj >> Name >> Age >> isItTrue;
-//        //bool alpha iin the line below changes the value of bool from 0 to true or false
-//        std::cout << "name : "<< std::left <<std::setw(10)<<Name;
-//        std::cout <<"| Age is :"<<std::setw(4)<<Age <<std::right;
-//        std::cout <<" | That is : "<< std::boolalpha <<isItTrue <<std::endl;
-//    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+void f1(){
+std::ifstream Readobj;
+
+
+    Readobj.open("main.txt");
+
+
+    std::string Name;
+    int Age;
+    bool isItTrue;
+
+    while(!Readobj.eof()){
+        Readobj >> Name >> Age >> isItTrue;
+        //bool alpha iin the line below changes the value of bool from 0 to true or false
+        std::cout << "name : "<< std::left <<std::setw(10)<<Name;
+        std::cout <<"| Age is :"<<std::setw(4)<<Age <<std::right;
+        std::cout <<" | That is : "<< std::boolalpha <<isItTrue <<std::endl;
+    }
     //this while down also print the txt file but we can not manipulate it
-/*
+
     std::string line;
     while (std::getline(Readobj,line)){
         std::cout <<line <<std::endl;
     }
-    */
-
-
     //close the file
-   // Readobj.close();
-    //***************************************************************************************************
-   /* Readobj.open("cha.txt");
+    Readobj.close();
+}
+
+
+void f2(){
+    std::ifstream Readobj;
+    Readobj.open("cha.txt");
 
     std::string answerKey;
     int Score;
@@ -59,8 +78,13 @@ int main()
     double average=Total/5;
     std::cout << "------------------------------"<< std::endl;
     std::cout<< "The Average is : "<<average;
-    Readobj.close();*/
-    //*******************************************************************************
+    Readobj.close();
+
+}
+
+
+void f3(){
+    std::ifstream Readobj;
     Readobj.open("Info.txt");
     std::string text;
     int counter=0;
@@ -72,9 +96,5 @@ int main()
         outfile <<std::setw(3)<<std::left<< counter <<text<<std::endl ;
     }
 
-
-
-
-
-    return 0;
+//use get file cause it reads the whole line and then go to next line but readobj.eof goes word by word and here we don`t want that
 }
