@@ -34,9 +34,9 @@ int main()
 
 
     //close the file
-    Readobj.close();
+   // Readobj.close();
     //***************************************************************************************************
-    Readobj.open("cha.txt");
+   /* Readobj.open("cha.txt");
 
     std::string answerKey;
     int Score;
@@ -57,7 +57,23 @@ int main()
         Total=Total+Score;
     }
     double average=Total/5;
-    std::cout<<average;
+    std::cout << "------------------------------"<< std::endl;
+    std::cout<< "The Average is : "<<average;
+    Readobj.close();*/
+    //*******************************************************************************
+    Readobj.open("Info.txt");
+    std::string text;
+    int counter=0;
+    std::ofstream outfile ("test.txt",std::ios::app);
+    while(getline(Readobj,text)){
+
+        counter++;
+        std::cout <<std::setw(3)<<std::left<< counter <<text<<std::endl ; ;
+        outfile <<std::setw(3)<<std::left<< counter <<text<<std::endl ;
+    }
+
+
+
 
 
     return 0;
