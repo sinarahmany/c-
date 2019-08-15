@@ -8,10 +8,11 @@
 
 int main() {
 
-    Person *a = new Person{"saygin","guven","sayginguven@gmail.com","604 700 43 42", "Vancouver", 105};
+    Person *myPerson = new Person{"saygin","guven","sayginguven@gmail.com","604 700 43 42", "Vancouver", 105};
 
-    (*a).toString();
-    a->toString();
+    Account myAccount (1,{1,2,3},{100,250,500},505,new Person());
+
+
 
 
     return 0;
