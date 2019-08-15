@@ -9,6 +9,8 @@
 #include "OOP/Cat.hpp"
 #include <iostream>
 #include <string>
+#include <stdio.h>
+#include <cstring>
 
 //global variables
 const int stackSizeStaticArr = 100;
