@@ -1,6 +1,6 @@
 #include "functions.h"
-
 #include <iostream>
+#include <string>
 //one way is adding all your std separately
 //using std::cout;
 //using std::endl;
@@ -9,8 +9,7 @@
 //using namespace std;
 
 
-#include <iostream>
-#include <string>
+
 
 //global variables
 const int stackSizeStaticArr = 100;

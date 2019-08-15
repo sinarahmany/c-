@@ -37,7 +37,7 @@ std::ifstream Readobj;
 
     while(!Readobj.eof()){
         Readobj >> Name >> Age >> isItTrue;
-        //bool alpha iin the line below changes the value of bool from 0 to true or false
+        //bool alpha in the line below changes the value of bool from 0 to true or false
         std::cout << "name : "<< std::left <<std::setw(10)<<Name;
         std::cout <<"| Age is :"<<std::setw(4)<<Age <<std::right;
         std::cout <<" | That is : "<< std::boolalpha <<isItTrue <<std::endl;

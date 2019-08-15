@@ -13,11 +13,10 @@ string bla_bla(std::string strInput);
 
 int main()
 {
-    string beeeep;
-    std::cin >> beeeep ;
-    std::cout << bla_bla(beeeep);
 
-    //stackMenuWithPointer();
+//    std::cout << bla_bla(std::string strInput);
+
+    stackMenuWithPointer();
 
     return 0;
 }
