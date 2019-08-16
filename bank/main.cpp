@@ -1,4 +1,3 @@
-
 #include "functions.hpp"
 #include "moreFunctions.hpp"
 #include "OOP/Time.hpp"
@@ -14,10 +13,10 @@ int main() {
 //    myPerson->toString();
 
     Account myAccount(1, {0,1,2}, {100.05,250.95,500.02}, 123, myPerson);
-//
-//    myAccount.deposit(156.98, 0);
+
+    myAccount.deposit(156.98, 0);
 //    myAccount.withdrawl(200, 0);
-    myAccount.transfer(99, 0, 1);
+//    myAccount.transfer(99, 0, 1);
 
     myAccount.toString();
 

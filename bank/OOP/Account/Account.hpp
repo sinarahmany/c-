@@ -1,7 +1,5 @@
-
 #ifndef Account_hpp
 #define Account_hpp
-
 #include <stdio.h>
 #include "../Person/Person.hpp"
 #include <vector>

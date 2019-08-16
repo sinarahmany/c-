@@ -1,6 +1,4 @@
-
 #include "Account.hpp"
-
 #include "../Person/Person.hpp"
 #include <iostream>
 #include <iomanip>
