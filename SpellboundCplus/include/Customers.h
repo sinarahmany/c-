@@ -16,6 +16,7 @@ class Customers
         std::string LastName;
         std::string Email;
         bool Gender;
+
     private:
 
 };

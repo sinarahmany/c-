@@ -9,8 +9,10 @@
 using namespace std;
 void case1();
 void case2();
-
-    int counter;
+void case5();
+int counter;
+Customers fisrt ;
+string Genderstring;
 int main()
 {
     bool flag=true;
@@ -30,6 +32,13 @@ int main()
             case 2:
                 case2();
                 break;
+            case 5 :
+                case5();
+                break;
+            case 6 :
+                flag=false;
+                cout<<"You Exit";
+                break;
             default:
                 cout<<"*** "<<choice<<" Is not in the menu ***\n\n\n";
                 break;
@@ -40,36 +49,63 @@ int main()
 }
 void case1(){
     std::ofstream outfile ("Random.txt",std::ios::app);
-   //  outfile<<"ID"<<"          "<<std::setw(4)<<"Name          "<<std::right;
-   // outfile<<"LastName"<<"          "<<std::setw(4)<<"PhoneNumber          "<<std::right;
-   // outfile<<"Email"<<"          "<<std::setw(4)<<"Gender          "<<std::right<<std::endl;
+//    outfile<<std::left<<std::setw(12)<<"ID"<<std::left<<std::setw(12)<<"Name";
+//    outfile<<std::left<<std::setw(16)<<"LastName"<<std::left<<std::setw(19)<<"Phone-Number";
+//    outfile<<std::left<<std::setw(14)<<"Email"<<std::left<<std::setw(12)<<"Gender"<<std::endl;
 }
 
 void case2(){
-    Customers fisrt ;
+
+
     std::ifstream Readobj;
     Readobj.open("Random.txt");
-
-
-
-    while(Readobj >>counter){
+    while(Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring){
         Readobj >> counter;
-
     }
-        counter++;
+    counter++;
     std::ofstream outfile ("Random.txt",std::ios::app);
-    outfile<<std::left<<std::setw(10)<<counter;
+    outfile<<std::left<<std::setw(12)<<counter;
     cout<<"Type you Name \n";
     cin>>fisrt.Name;
-    outfile<<std::left<<std::setw(10)<<fisrt.Name;
+    outfile<<std::left<<std::setw(12)<<fisrt.Name;
     cout<<"Type you LastName \n";
     cin>>fisrt.LastName;
-    outfile<<std::left<<std::setw(10)<<fisrt.LastName;
-    cout<<"Type you Email \n";
-    cin>>fisrt.Email;
-    outfile<<std::left<<std::setw(10)<<fisrt.Email;
+    outfile<<std::left<<std::setw(16)<<fisrt.LastName;
     cout<<"Type you Phone Number \n";
     cin>>fisrt.PhoneNum;
-    outfile<<std::left<<std::setw(10)<<fisrt.PhoneNum<<std::endl;
+    outfile<<std::left<<std::setw(19)<<fisrt.PhoneNum;
+    cout<<"Type you Email \n";
+    cin>>fisrt.Email;
+    outfile<<std::left<<std::setw(14)<<fisrt.Email;
+    cout<<"Gender---> 0 For Male , 1 For Female";
+    cin>>fisrt.Gender;
+    if(fisrt.Gender==0){
+        Genderstring="Male";
+    }else{
+        Genderstring="Female";
+    }
+    outfile<<std::left<<std::setw(12)<<Genderstring<<std::endl;
 
+
+}
+
+
+void case5(){
+    std::ifstream Readobj;
+    Readobj.open("Random.txt");
+    while(Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring){
+        int Search;
+        cout<<"Type your ID : \n";
+        cin>>Search;
+        if(Readobj >> Search){
+                if(Search==counter){
+                    cout << "ID : " << counter<<std::endl;
+                    cout << "Name : " << fisrt.Name <<std::endl;
+                }
+                else{
+                    cout<<"ID is not in the DataBase \nXXXXXXXXXXXXXXXXXXXXXXXXX"<<std::endl;
+                }
+
+        }
+    }
 }
