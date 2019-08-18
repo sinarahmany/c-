@@ -37,7 +37,7 @@ int main()
                 break;
             case 6 :
                 flag=false;
-                cout<<"You Exit";
+                cout<<"You try to Exit but it don`t";
                 break;
             default:
                 cout<<"*** "<<choice<<" Is not in the menu ***\n\n\n";
@@ -60,7 +60,7 @@ void case2(){
     std::ifstream Readobj;
     Readobj.open("Random.txt");
     while(Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring){
-        Readobj >> counter;
+
     }
     counter++;
     std::ofstream outfile ("Random.txt",std::ios::app);
@@ -77,7 +77,7 @@ void case2(){
     cout<<"Type you Email \n";
     cin>>fisrt.Email;
     outfile<<std::left<<std::setw(14)<<fisrt.Email;
-    cout<<"Gender---> 0 For Male , 1 For Female";
+    cout<<"Gender---> [ 0 For Male , 1 For Female ]";
     cin>>fisrt.Gender;
     if(fisrt.Gender==0){
         Genderstring="Male";
@@ -92,20 +92,32 @@ void case2(){
 
 void case5(){
     std::ifstream Readobj;
+    string line;
     Readobj.open("Random.txt");
     while(Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring){
-        int Search;
+        string Search;
         cout<<"Type your ID : \n";
         cin>>Search;
-        if(Readobj >> Search){
-                if(Search==counter){
-                    cout << "ID : " << counter<<std::endl;
-                    cout << "Name : " << fisrt.Name <<std::endl;
-                }
-                else{
-                    cout<<"ID is not in the DataBase \nXXXXXXXXXXXXXXXXXXXXXXXXX"<<std::endl;
-                }
+
+               size_t pos;
+               while(Readobj.good())
+               {
+                   getline(Readobj,line); // get line from file
+                   pos=line.find(Search); // search
+                   if(pos!=string::npos) // string::npos is returned if string is not found
+                   {
+                       cout <<"Found!"<<std::endl;
+                      cout << "ID : " << counter<<std::endl;
+                       cout << "Name : " << fisrt.Name <<std::endl;
+                       break;
+
+
+                   }
+
+
+               }
+                break;
+
 
         }
-    }
 }
