@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1566236362 source:c:\work\c++(code blocks)\inheritance\main.cpp
+	<iostream>
+	"Animal.h"
+	"Dog.h"
+
+1566235152 c:\work\c++(code blocks)\inheritance\include\animal.h
+
+1566236890 c:\work\c++(code blocks)\inheritance\include\dog.h
+	"Animal.h"
+	<iostream>
+
+1566236677 source:c:\work\c++(code blocks)\inheritance\src\animal.cpp
+	"Animal.h"
+	<iostream>
+
+1566236890 source:c:\work\c++(code blocks)\inheritance\src\dog.cpp
+	"Dog.h"
+	<iostream>
+
