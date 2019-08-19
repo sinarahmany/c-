@@ -1,106 +1,105 @@
 #include "SinaIsOnDate.h"
-//declaring getters and setters
-int SinaIsOnDate::getDay(){
-    return day;
-}
-void SinaIsOnDate::setDay(int day){
-    this->day = day;
-}
 
-int SinaIsOnDate::geMonth(){
-    return Month;
-}
+    // default constructor
+    SinaIsOnDate::SinaIsOnDate():SinaIsOnDate(1,1,1970){
+        strDate("\ndefault constructor\n", 1);
+    }
 
-void SinaIsOnDate::setMonth(int Month){
-    this->Month = Month;
-}
-
-int SinaIsOnDate::getYears(){
-    return Years;
-}
-
-void SinaIsOnDate::setYears(int Years){
-    this->Years = Years;
-}
-//default constructor
-SinaIsOnDate::SinaIsOnDate() :
-SinaIsOnDate(0, 0,0){
-
-}
-//overloaded constructor
-SinaIsOnDate:: SinaIsOnDate(int Years, int Month, int day)
-{
-    //check and convert the day to upper case
-    if(day >=1 && day <= 30){
+    // overloaded constructor
+    SinaIsOnDate::SinaIsOnDate(int month, int day, int year){
         this->day = day;
-    }else {
-        this->day = 1;
+        this->month = month;
+        this->year = year;
+        strDate("\noverloaded constructor : " + std::to_string(this->month) +
+                                                        + " day: " + std::to_string(this->day) +
+                                                        + " year: " + std::to_string(this->year) + "\n", 1);
     }
 
-
-    if(Month >=1 && Month <12){
-        this->Month = Month;
-    } else{
-        this->Month = 1;
+    // copy constructor
+    SinaIsOnDate::SinaIsOnDate(const SinaIsOnDate &obj){
+        this->day = obj.day;
+        this->month = obj.month;
+        this->year = obj.year;
+        strDate("\ncopy constructor : " + std::to_string(this->month) +
+                                                        + " day: " + std::to_string(this->day) +
+                                                        + " year: " + std::to_string(this->year) + "\n", 1);
     }
 
-    if(Years >=1 && Years <= 2019){
-        this->Years = Years;
-    }else {
-        this->Years = 1;
-    }
-}
-SinaIsOnDate::SinaIsOnDate(const SinaIsOnDate &obj){
-    std::cout << " copy constructor called " << std::endl;
-    this->Years = obj.Years;
-    this->Month = obj.Month;
-    this->day = obj.day;
-
-}
-void SinaIsOnDate::whatTimeIsIt(){
-
-    std::string formattedYears;
-    std::string formattedMonth;
-    std::string formattedDay;
-
-
-    formattedYears = std::to_string(Years);
-    formattedMonth = std::to_string(Month);
-    formattedDay = std::to_string(day);
-
-
-    if(Years < 10){
-        formattedYears = "0" + std::to_string(Years);
+    // Destructor
+    SinaIsOnDate::~SinaIsOnDate(){
     }
 
-    if(Month < 10){
-        formattedMonth = "0" + std::to_string(Month);
+    //getters and setters
+    int SinaIsOnDate::getDay(){
+        return day;
     }
 
+    void SinaIsOnDate::setDay(int day){
+        this->day = day;
+    }
+    int SinaIsOnDate::getMonth(){
+        return month;
+    }
+    void SinaIsOnDate::setMonth(int month){
+        this->month = month;
+    }
 
-    std::cout << formattedYears << "/" << formattedMonth << "/" << formattedDay << std::endl;
+    int SinaIsOnDate::getYear(){
+        return year;
+    }
+    void SinaIsOnDate::setYear(int year){
+        this->year = year;
+    }
 
+    // checking the Day
+
+    std::string SinaIsOnDate::checkSinaDay(int day){
+        if(day>0 && day<32){
+            this->day = day;
+            return(day<10 ? "0"+std::to_string(day) : std::to_string(day));
+        }else {
+            this->day = -1;
+            return("-1");
+        }
+    }
+
+    // checking the month
+    std::string SinaIsOnDate::checkSinaMonth(int month){
+        if(month>0 && month<13){
+            this->month = month;
+            return(month<10 ? "0"+std::to_string(month) : std::to_string(month));
+        } else{
+            this->month = -1;
+            return("-1");
+        }
+    }
+
+    // checking the year
+    std::string SinaIsOnDate::checkSinaYear(int year){
+        if(year>0){
+            this->year = year;
+            return(std::to_string(year));
+        }else {
+            this->year = -1;
+            return("-1");
+        }
+    }
+
+    // leap year
+    bool checkSinaLeapYear(int year){
+       if (((year%4 == 0) && (year%100 != 0)) || (year%400 == 0)) return true;
+       return false;
+    }
+
+    void SinaIsOnDate::printSinaDate(){
+        strDate("\nThe Date is: ", 1);
+        strDate(checkSinaDay(this->day)+"/"+checkSinaMonth(this->month)+"/"+checkSinaYear(this->year),1);
+        strDate("\nand " + std::to_string(this->year) + (checkSinaLeapYear(this->year)?" is a":" is not a") + " Leap year.\n\n",1);
+    }
+
+    void strDate(std::string strText, int intQty){
+
+        for (int i=0; i<intQty; i++) std::cout<<strText;
+
+    return;
 }
-void SinaIsOnDate::whatTimeWasIt(){
-
-    std::string formattedYears;
-    std::string formattedMonth;
-    std::string formattedDay;
-
-
-    formattedYears = std::to_string(Years);
-    formattedMonth = std::to_string(Month);
-    formattedDay = std::to_string(day);
-
-
-    std::cout << formattedYears << " Years," << formattedMonth << " Months," << formattedDay << " Days,"<< std::endl;
-}
-void SinaIsOnDate::whatTimeWillIt(){
-    std::string formattedDay;
-
-    day=(Years*365)+(Month*30);
-    formattedDay = std::to_string(day);
-
-    std::cout << formattedDay << " Days, More than the first day of calendar"<< std::endl;
-}
-

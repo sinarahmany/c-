@@ -1,14 +1,15 @@
 # depslib dependency file v1.0
-1565293150 source:c:\work\c++(code blocks)\c++asshment2\main.cpp
+1566246099 source:c:\work\c++(code blocks)\c++asshment2\main.cpp
 	<iostream>
 	<string>
-	<SinaIsOnDate.h>
+	"SinaIsOnDate.h"
 
-1565292393 c:\work\c++(code blocks)\c++asshment2\include\sinaisondate.h
+1566245932 c:\work\c++(code blocks)\c++asshment2\include\sinaisondate.h
 	<stdio.h>
 	<iostream>
 	<string>
+	<windows.h>
 
-1565293162 source:c:\work\c++(code blocks)\c++asshment2\src\sinaisondate.cpp
+1566245596 source:c:\work\c++(code blocks)\c++asshment2\src\sinaisondate.cpp
 	"SinaIsOnDate.h"
 

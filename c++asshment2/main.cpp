@@ -1,19 +1,22 @@
 #include <iostream>
 #include <string>
-#include <SinaIsOnDate.h>
+#include "SinaIsOnDate.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Goodbye world!" << endl;
+    // the driver to run the code
+    strDate("i`m driver\n" ,1);
 
-    SinaIsOnDate nn(2019,7,11);
-    nn.whatTimeIsIt();
-    //call the copy con..
-    //SinaIsOnDate SinaIsOnDate(nn);
-    SinaIsOnDate mm (1,1,2);
-    mm.whatTimeWillIt();
+    SinaIsOnDate* aSinaIsOnDate = new SinaIsOnDate();
+    (*aSinaIsOnDate).printSinaDate();
+
+    SinaIsOnDate* bSinaIsOnDate = new SinaIsOnDate(7,19,1974);
+    (*bSinaIsOnDate).printSinaDate();
+
+    SinaIsOnDate* cSinaIsOnDate = new SinaIsOnDate(1,1,2020);
+    (*cSinaIsOnDate).printSinaDate();
 
 
 }

@@ -9,6 +9,7 @@
 using namespace std;
 void case1();
 void case2();
+void case3();
 void case5();
 int counter;
 Customers fisrt ;
@@ -31,6 +32,9 @@ int main()
                 break;
             case 2:
                 case2();
+                break;
+            case 3:
+                case3();
                 break;
             case 5 :
                 case5();
@@ -88,6 +92,75 @@ void case2(){
 
 
 }
+void case3(){
+    std::ifstream Readobj;
+    string line;
+    Readobj.open("Random.txt");
+     while(Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring){
+        string Search;
+        cout<<"Type your ID : \n";
+        cin>>Search;
+
+
+               while(Readobj.good())
+               {
+                   getline(Readobj,line); // get line from file
+                   std::string str2 = line.substr (0,1);//read from postion zero till lenght of one
+                   if(str2==Search) // string::npos is returned if string is not found
+                   {
+                        //cout <<line <<endl;
+                        cout <<"Found!"<<std::endl;
+                        cout << "ID : " << line.substr (0,1)<<std::endl;
+                        cout << "Name : " << line.substr (12,7) <<std::endl;
+                        cout << "Last Name : " << line.substr (24,10) <<std::endl;
+                        cout << "Phone Number : " << line.substr (40,10) <<std::endl;
+                        cout << "Email : " << line.substr (59,10) <<std::endl;
+                        cout << "\n                 ->Name Type 1 \n"
+                        "To Modify your   ->Last Name type 2 \n"
+                        "                 ->Phone Number type 3 \n"
+                        "                 ->Email type 4 \n\n";
+                        int choice;
+                        cin>>choice;
+                        string modifier;
+
+                                std::ofstream outfile ("Random.txt",std::ios::app);
+                        switch(choice){
+                            case 1:
+                                cout<< "Type your new Name"<<endl;
+                                cin>>modifier;
+                                line.substr (12,7)=modifier;
+
+
+                                outfile<<modifier;
+                                break;
+                            case 2:
+                                cout<< "Type your new Last Name"<<endl;
+                                break;
+                            case 3:
+                                cout<< "Type your new Phone"<<endl;
+                                break;
+                            case 4:
+                                cout<< "Type your new email"<<endl;
+                                break;
+                            default:
+                                cout<< "not in the menu"<<endl;
+                                break;
+                        }
+
+
+                        break;
+
+
+                   }
+
+
+               }
+                break;
+
+
+        }
+}
+
 
 
 void case5(){
