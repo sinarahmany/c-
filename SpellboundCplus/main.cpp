@@ -99,17 +99,21 @@ void case5(){
         cout<<"Type your ID : \n";
         cin>>Search;
 
-               size_t pos;
+
                while(Readobj.good())
                {
                    getline(Readobj,line); // get line from file
-                   pos=line.find(Search); // search
-                   if(pos!=string::npos) // string::npos is returned if string is not found
+                   std::string str2 = line.substr (0,1);//read from postion zero till lenght of one
+                   if(str2==Search) // string::npos is returned if string is not found
                    {
-                       cout <<"Found!"<<std::endl;
-                      cout << "ID : " << counter<<std::endl;
-                       cout << "Name : " << fisrt.Name <<std::endl;
-                       break;
+                        //cout <<line <<endl;
+                        cout <<"Found!"<<std::endl;
+                        cout << "ID : " << line.substr (0,1)<<std::endl;
+                        cout << "Name : " << line.substr (12,7) <<std::endl;
+                        cout << "Last Name : " << line.substr (24,10) <<std::endl;
+                        cout << "Phone Number : " << line.substr (40,10) <<std::endl;
+                        cout << "Email : " << line.substr (59,10) <<std::endl;
+                        break;
 
 
                    }
