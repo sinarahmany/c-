@@ -10,6 +10,7 @@ using namespace std;
 void case1();
 void case2();
 void case3();
+void case4();
 void case5();
 int counter;
 Customers fisrt ;
@@ -18,7 +19,7 @@ int main()
 {
     bool flag=true;
     int choice;
-    while(flag=true){
+    while(flag==true){
     cout<<"1- Create Random file \n"
     "2- Add record \n"
     "3- Modify record \n"
@@ -36,12 +37,15 @@ int main()
             case 3:
                 case3();
                 break;
+            case 4:
+                case4();
+                break;
             case 5 :
                 case5();
                 break;
             case 6 :
                 flag=false;
-                cout<<"You try to Exit but it don`t";
+                cout<<"always put == not = so that the flag becomes false and you be able to exit the program"<<endl;
                 break;
             default:
                 cout<<"*** "<<choice<<" Is not in the menu ***\n\n\n";
@@ -136,7 +140,7 @@ void case3(){
                                 cin>>modifier;
                                 temp<<std::left<<std::setw(12)<<line.substr (0,1)<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(16)
                                 <<line.substr (24,10)<<std::left<<std::setw(19)<<line.substr (40,10)<<
-                                std::left<<std::setw(14)<<line.substr (59,10)<<std::left<<std::setw(12)<<line.substr (73,10) <<std::endl;;
+                                std::left<<std::setw(14)<<line.substr (59,10)<<std::left<<std::setw(12)<<line.substr (73,10) <<std::endl;
                                 //std::ofstream outfile ("Random.txt",std::ios::app);
                                 //str3=modifier;
                                 //outfile<<std::left<<std::setw(12)<<str3;
@@ -146,12 +150,25 @@ void case3(){
                                 break;
                             case 2:
                                 cout<< "Type your new Last Name"<<endl;
+
+                                cin>>modifier;
+                                temp<<std::left<<std::setw(12)<<line.substr (0,1)<<std::left<<std::setw(12)<<line.substr (12,7)<<std::left<<std::setw(16)
+                                <<modifier<<std::left<<std::setw(19)<<line.substr (40,10)<<
+                                std::left<<std::setw(14)<<line.substr (59,10)<<std::left<<std::setw(12)<<line.substr (73,10) <<std::endl;
                                 break;
                             case 3:
                                 cout<< "Type your new Phone"<<endl;
+                                cin>>modifier;
+                                temp<<std::left<<std::setw(12)<<line.substr (0,1)<<std::left<<std::setw(12)<<line.substr (12,7)<<std::left<<std::setw(16)
+                                <<line.substr (24,10)<<std::left<<std::setw(19)<<modifier<<
+                                std::left<<std::setw(14)<<line.substr (59,10)<<std::left<<std::setw(12)<<line.substr (73,10) <<std::endl;
                                 break;
                             case 4:
                                 cout<< "Type your new email"<<endl;
+                                cin>>modifier;
+                                temp<<std::left<<std::setw(12)<<line.substr (0,1)<<std::left<<std::setw(12)<<line.substr (12,7)<<std::left<<std::setw(16)
+                                <<line.substr (24,10)<<std::left<<std::setw(19)<<line.substr (40,10)<<
+                                std::left<<std::setw(14)<<modifier<<std::left<<std::setw(12)<<line.substr (73,10) <<std::endl;
                                 break;
                             default:
                                 cout<< "not in the menu"<<endl;
@@ -168,12 +185,86 @@ void case3(){
 
                    }
 
+               }
+                break;
+
+
+        }
+        Readobj.close();
+        temp.close();
+
+                    if( remove("Random.txt") != 0 ){
+                    perror( "Error deleting file" );}
+                    else{
+                    puts( "File successfully deleted" );
+                    }
+                    rename("MRandom.txt","Random.txt");
+}
+
+
+void case4(){
+    std::ifstream Readobj;
+    string line;
+    Readobj.open("Random.txt");
+
+    std::ofstream temp ("MRandom.txt");
+
+     while(!Readobj.eof()){
+            //Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring
+        string Search;
+        cout<<"Type your ID : \n";
+        cin>>Search;
+
+
+               while(Readobj.good())
+               {
+                   getline(Readobj,line); // get line from file
+                   std::string str2 = line.substr (0,1);//read from postion zero till lenght of one
+                   if(str2==Search)
+                   {
+                        //cout <<line <<endl;
+                        cout <<"Found!"<<std::endl;
+                        cout << "ID : " << line.substr (0,1)<<std::endl;
+                        cout << "Name : " << line.substr (12,7) <<std::endl;
+                        cout << "Last Name : " << line.substr (24,10) <<std::endl;
+                        cout << "Phone Number : " << line.substr (40,10) <<std::endl;
+                        cout << "Email : " << line.substr (59,10) <<std::endl;
+                        cout << "Gender : " << line.substr (73,10) <<std::endl;
+
+
+                        string modifier;
+                        std::string str3 = line.substr(12,7);
+
+
+
+                                modifier=" ";
+                                temp<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(16)
+                                <<modifier<<std::left<<std::setw(19)<<modifier<<
+                                std::left<<std::setw(14)<<modifier<<std::left<<std::setw(12)<<modifier <<std::endl;
+
+
+
+
+                   }
+                   else{
+                    temp<<line<<endl;
+
+                   }
 
                }
                 break;
 
 
         }
+        Readobj.close();
+        temp.close();
+
+                    if( remove("Random.txt") != 0 ){
+                    perror( "Error deleting file" );}
+                    else{
+                    puts( "File successfully deleted" );
+                    }
+                    rename("MRandom.txt","Random.txt");
 }
 
 
