@@ -96,7 +96,11 @@ void case3(){
     std::ifstream Readobj;
     string line;
     Readobj.open("Random.txt");
-     while(Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring){
+
+    std::ofstream temp ("MRandom.txt");
+
+     while(!Readobj.eof()){
+            //Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring
         string Search;
         cout<<"Type your ID : \n";
         cin>>Search;
@@ -106,7 +110,7 @@ void case3(){
                {
                    getline(Readobj,line); // get line from file
                    std::string str2 = line.substr (0,1);//read from postion zero till lenght of one
-                   if(str2==Search) // string::npos is returned if string is not found
+                   if(str2==Search)
                    {
                         //cout <<line <<endl;
                         cout <<"Found!"<<std::endl;
@@ -115,6 +119,8 @@ void case3(){
                         cout << "Last Name : " << line.substr (24,10) <<std::endl;
                         cout << "Phone Number : " << line.substr (40,10) <<std::endl;
                         cout << "Email : " << line.substr (59,10) <<std::endl;
+                        cout << "Gender : " << line.substr (73,10) <<std::endl;
+
                         cout << "\n                 ->Name Type 1 \n"
                         "To Modify your   ->Last Name type 2 \n"
                         "                 ->Phone Number type 3 \n"
@@ -122,16 +128,21 @@ void case3(){
                         int choice;
                         cin>>choice;
                         string modifier;
+                        std::string str3 = line.substr(12,7);
 
-                                std::ofstream outfile ("Random.txt",std::ios::app);
                         switch(choice){
                             case 1:
                                 cout<< "Type your new Name"<<endl;
                                 cin>>modifier;
-                                line.substr (12,7)=modifier;
+                                temp<<std::left<<std::setw(12)<<line.substr (0,1)<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(16)
+                                <<line.substr (24,10)<<std::left<<std::setw(19)<<line.substr (40,10)<<
+                                std::left<<std::setw(14)<<line.substr (59,10)<<std::left<<std::setw(12)<<line.substr (73,10) <<std::endl;;
+                                //std::ofstream outfile ("Random.txt",std::ios::app);
+                                //str3=modifier;
+                                //outfile<<std::left<<std::setw(12)<<str3;
 
 
-                                outfile<<modifier;
+
                                 break;
                             case 2:
                                 cout<< "Type your new Last Name"<<endl;
@@ -148,8 +159,12 @@ void case3(){
                         }
 
 
-                        break;
 
+
+
+                   }
+                   else{
+                    temp<<line<<endl;
 
                    }
 
@@ -186,6 +201,7 @@ void case5(){
                         cout << "Last Name : " << line.substr (24,10) <<std::endl;
                         cout << "Phone Number : " << line.substr (40,10) <<std::endl;
                         cout << "Email : " << line.substr (59,10) <<std::endl;
+                        cout << "Gender : " << line.substr (73,10) <<std::endl;
                         break;
 
 
