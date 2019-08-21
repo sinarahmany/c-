@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "Animal.h"
+
 #include "Dog.h"
 #include "Shape.h"
 using namespace std;
@@ -18,7 +18,39 @@ class Rectangle : public Shape{
         cout<< "i am drwaing a Rectangle"<<endl;
     }
 };
-
+//base
+class Animal{
+public:
+    virtual void sound(){
+        std::cout << " I can not make sound since I dont know what kind of animal I am" << std::endl;
+    }
+    virtual ~Animal(){};
+};
+//inherited class, derived class
+class Mouse : public Animal{
+public:
+    virtual void sound() override
+    {
+        std::cout << "squeak" << std::endl;
+    }
+    virtual ~Mouse(){};
+};
+//inherited class, derived class
+class Bird : public Animal{
+public:
+    virtual void sound() override{
+        std::cout << "tweet" << std::endl;
+    }
+    virtual ~Bird(){};
+};
+//inherited class , derived class
+class Dog : public Animal{
+public:
+    virtual void sound() override{
+        std::cout << "whooof" << std::endl;
+    }
+    virtual ~Dog(){};
+};
 
 int main()
 {
