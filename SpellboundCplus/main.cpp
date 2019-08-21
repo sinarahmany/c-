@@ -104,7 +104,6 @@ void case3(){
     std::ofstream temp ("MRandom.txt");
 
      while(!Readobj.eof()){
-            //Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring
         string Search;
         cout<<"Type your ID : \n";
         cin>>Search;
@@ -141,11 +140,6 @@ void case3(){
                                 temp<<std::left<<std::setw(12)<<line.substr (0,1)<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(16)
                                 <<line.substr (24,10)<<std::left<<std::setw(19)<<line.substr (40,10)<<
                                 std::left<<std::setw(14)<<line.substr (59,10)<<std::left<<std::setw(12)<<line.substr (73,10) <<std::endl;
-                                //std::ofstream outfile ("Random.txt",std::ios::app);
-                                //str3=modifier;
-                                //outfile<<std::left<<std::setw(12)<<str3;
-
-
 
                                 break;
                             case 2:
@@ -174,11 +168,6 @@ void case3(){
                                 cout<< "not in the menu"<<endl;
                                 break;
                         }
-
-
-
-
-
                    }
                    else{
                     temp<<line<<endl;
@@ -210,7 +199,7 @@ void case4(){
     std::ofstream temp ("MRandom.txt");
 
      while(!Readobj.eof()){
-            //Readobj >>counter>>fisrt.Name>>fisrt.LastName>>fisrt.PhoneNum>>fisrt.Email>>Genderstring
+
         string Search;
         cout<<"Type your ID : \n";
         cin>>Search;
@@ -222,7 +211,6 @@ void case4(){
                    std::string str2 = line.substr (0,1);//read from postion zero till lenght of one
                    if(str2==Search)
                    {
-                        //cout <<line <<endl;
                         cout <<"Found!"<<std::endl;
                         cout << "ID : " << line.substr (0,1)<<std::endl;
                         cout << "Name : " << line.substr (12,7) <<std::endl;
@@ -237,14 +225,10 @@ void case4(){
 
 
 
-                                modifier=" ";
+                                modifier="";
                                 temp<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(16)
                                 <<modifier<<std::left<<std::setw(19)<<modifier<<
-                                std::left<<std::setw(14)<<modifier<<std::left<<std::setw(12)<<modifier <<std::endl;
-
-
-
-
+                                std::left<<std::setw(14)<<modifier<<std::left<<std::setw(12)<<modifier ;
                    }
                    else{
                     temp<<line<<endl;

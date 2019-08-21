@@ -36,9 +36,11 @@
 		</Compiler>
 		<Unit filename="include/Animal.h" />
 		<Unit filename="include/Dog.h" />
+		<Unit filename="include/Shape.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Animal.cpp" />
 		<Unit filename="src/Dog.cpp" />
+		<Unit filename="src/Shape.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1566236362 source:c:\work\c++(code blocks)\inheritance\main.cpp
+1566408747 source:c:\work\c++(code blocks)\inheritance\main.cpp
 	<iostream>
 	"Animal.h"
 	"Dog.h"
+	"Shape.h"
 
 1566235152 c:\work\c++(code blocks)\inheritance\include\animal.h
 
@@ -17,4 +18,9 @@
 1566236890 source:c:\work\c++(code blocks)\inheritance\src\dog.cpp
 	"Dog.h"
 	<iostream>
+
+1566408747 c:\work\c++(code blocks)\inheritance\include\shape.h
+
+1566408753 source:c:\work\c++(code blocks)\inheritance\src\shape.cpp
+	"Shape.h"
 
