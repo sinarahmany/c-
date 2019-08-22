@@ -225,10 +225,8 @@ void case4(){
 
 
 
-                                modifier="";
-                                temp<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(12)<<modifier<<std::left<<std::setw(16)
-                                <<modifier<<std::left<<std::setw(19)<<modifier<<
-                                std::left<<std::setw(14)<<modifier<<std::left<<std::setw(12)<<modifier ;
+                               modifier="";
+
                    }
                    else{
                     temp<<line<<endl;

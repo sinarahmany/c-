@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1566411185 source:c:\work\c++(code blocks)\assigment 5cplus\src\vehicle.cpp
+	"Vehicle.h"
+
+1566411248 c:\work\c++(code blocks)\assigment 5cplus\include\vehicle.h
+	<string.h>
+	<iostream>
+
+1566411270 source:c:\work\c++(code blocks)\assigment 5cplus\main.cpp
+	<iostream>
+	<string.h>
+	<Vehicle.h>
+
