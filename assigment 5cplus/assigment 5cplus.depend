@@ -1,13 +1,53 @@
 # depslib dependency file v1.0
-1566411185 source:c:\work\c++(code blocks)\assigment 5cplus\src\vehicle.cpp
+1566501194 source:c:\work\c++(code blocks)\assigment 5cplus\src\vehicle.cpp
 	"Vehicle.h"
+	<iomanip>
+	<iostream>
 
-1566411248 c:\work\c++(code blocks)\assigment 5cplus\include\vehicle.h
+1566501194 c:\work\c++(code blocks)\assigment 5cplus\include\vehicle.h
 	<string.h>
 	<iostream>
 
-1566411270 source:c:\work\c++(code blocks)\assigment 5cplus\main.cpp
+1566501298 source:c:\work\c++(code blocks)\assigment 5cplus\main.cpp
+	<iostream>
+	<string.h>
+	"Vehicle.h"
+	"Heavy_Duty_Truck.h"
+	"Passenger_vehicle.h"
+	"Pickup.h"
+	"Truck.h"
+
+1566496970 source:c:\work\c++(code blocks)\assigment 5cplus\src\truck.cpp
+	"Truck.h"
+
+1566496985 c:\work\c++(code blocks)\assigment 5cplus\include\truck.h
 	<iostream>
 	<string.h>
 	<Vehicle.h>
+
+1566498963 source:c:\work\c++(code blocks)\assigment 5cplus\src\heavy_duty_truck.cpp
+	"Heavy_Duty_Truck.h"
+
+1566498766 c:\work\c++(code blocks)\assigment 5cplus\include\heavy_duty_truck.h
+	<string.h>
+	<iostream>
+	"Truck.h"
+
+1566501128 source:c:\work\c++(code blocks)\assigment 5cplus\src\passenger_vehicle.cpp
+	"Passenger_vehicle.h"
+	<iomanip>
+	<iostream>
+
+1566497170 c:\work\c++(code blocks)\assigment 5cplus\include\passenger_vehicle.h
+	<Vehicle.h>
+	<string.h>
+	<iostream>
+
+1566499391 source:c:\work\c++(code blocks)\assigment 5cplus\src\pickup.cpp
+	"Pickup.h"
+
+1566499343 c:\work\c++(code blocks)\assigment 5cplus\include\pickup.h
+	"Truck.h"
+	<string.h>
+	<iostream>
 

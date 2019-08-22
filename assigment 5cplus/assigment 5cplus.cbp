@@ -34,8 +34,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Heavy_Duty_Truck.h" />
+		<Unit filename="include/Passenger_vehicle.h" />
+		<Unit filename="include/Pickup.h" />
+		<Unit filename="include/Truck.h" />
 		<Unit filename="include/Vehicle.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Heavy_Duty_Truck.cpp" />
+		<Unit filename="src/Passenger_vehicle.cpp" />
+		<Unit filename="src/Pickup.cpp" />
+		<Unit filename="src/Truck.cpp" />
 		<Unit filename="src/Vehicle.cpp" />
 		<Extensions>
 			<code_completion />
