@@ -12,6 +12,14 @@ Truck::~Truck() {
 	std::cout << "Truck desctructor called!" << std::endl;
 }
 
+//overloaded constructor
+Truck::Truck(std::string CabSizeval, int HPval,bool HasWinchval)
+	: CabSize{ CabSizeval }, HorsePower{ HPval} ,HasWinch {HasWinchval}
+{
+	std::cout << "Truck overload constructor called!" << std::endl;
+}
+
+
 //copy constructor
 Truck::Truck(const Truck &obj): CabSize {obj.CabSize}, HorsePower{ obj.HorsePower}, HasWinch {obj.HasWinch}{}
 

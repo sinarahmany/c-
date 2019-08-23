@@ -12,7 +12,7 @@ Vehicle::Vehicle() : Make{ "unknown make" }, model{ "unknown model" }, color{"Wh
 Vehicle::Vehicle(std::string Makeval, std::string modelval,std::string colorval ,int VINval)
 	: Make{ Makeval }, model {modelval},color{ colorval }, VIN{ VINval }
 {
-	std::cout << "Vehicle default constructor called!" << std::endl;
+	std::cout << "Vehicle overload constructor called!" << std::endl;
 }
 
 //destructor

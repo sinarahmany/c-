@@ -18,6 +18,8 @@ class Truck : public Vehicle
         std::string setCabSize(std::string CabSize) const;
         int setHorsePower(int HorsePower) const;
         bool setHasWinch(bool HasWinch) const;
+        //overloaded const...
+        Truck(std::string CabSizeval,int HPval,bool HasWinchval);
         //copy constr...
         Truck(const Truck &obj);
 

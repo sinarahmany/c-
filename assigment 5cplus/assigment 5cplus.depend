@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1566501194 source:c:\work\c++(code blocks)\assigment 5cplus\src\vehicle.cpp
+1566502203 source:c:\work\c++(code blocks)\assigment 5cplus\src\vehicle.cpp
 	"Vehicle.h"
 	<iomanip>
 	<iostream>
@@ -8,7 +8,7 @@
 	<string.h>
 	<iostream>
 
-1566501298 source:c:\work\c++(code blocks)\assigment 5cplus\main.cpp
+1566501318 source:c:\work\c++(code blocks)\assigment 5cplus\main.cpp
 	<iostream>
 	<string.h>
 	"Vehicle.h"
@@ -17,10 +17,10 @@
 	"Pickup.h"
 	"Truck.h"
 
-1566496970 source:c:\work\c++(code blocks)\assigment 5cplus\src\truck.cpp
+1566502535 source:c:\work\c++(code blocks)\assigment 5cplus\src\truck.cpp
 	"Truck.h"
 
-1566496985 c:\work\c++(code blocks)\assigment 5cplus\include\truck.h
+1566502535 c:\work\c++(code blocks)\assigment 5cplus\include\truck.h
 	<iostream>
 	<string.h>
 	<Vehicle.h>
