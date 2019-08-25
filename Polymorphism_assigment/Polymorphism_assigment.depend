@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1566496378 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\applicationcenter\applicationcenter.cpp
+	"ApplicationCenter.hpp"
+
+1566496642 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\applicationcenter\applicationcenter.hpp
+	<stdio.h>
+	"../Service.hpp"
+
+1566497730 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\service.hpp
+	<stdio.h>
+
+1566496348 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calculator\calculator.cpp
+	"Calculator.hpp"
+
+1566496632 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calculator\calculator.hpp
+	<stdio.h>
+	"../Service.hpp"
+
+1566496452 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calendar\calendar.cpp
+	"Calendar.hpp"
+
+1566496652 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calendar\calendar.hpp
+	<stdio.h>
+	"../Service.hpp"
+
+1566496140 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\camera.cpp
+	"Camera.hpp"
+
+1566497726 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\camera.hpp
+	<stdio.h>
+	"../Service.hpp"
+

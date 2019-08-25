@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Polymorphism_assigment" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Polymorphism_assigment" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Polymorphism_assigment" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="PhoneProject/Classes/Service/ApplicationCenter/ApplicationCenter.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/ApplicationCenter/ApplicationCenter.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Calculator/Calculator.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Calculator/Calculator.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Calendar/Calendar.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Calendar/Calendar.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Camera/Camera.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Camera/Camera.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Camera/PictureCamera/PictureCamera.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Camera/PictureCamera/PictureCamera.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Camera/VideoCamera/VideoCamera.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Camera/VideoCamera/VideoCamera.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/EmailClient/EmailClient.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/EmailClient/EmailClient.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/EmailClient/Gmail/Gmail.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/EmailClient/Gmail/Gmail.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Message/Message.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Message/Message.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Phone/Phone.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Phone/Phone.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Player/MusicPlayer/MusicPlayer.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Player/MusicPlayer/MusicPlayer.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Player/Player.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Player/Player.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Player/VideoPlayer/VideoPlayer.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Player/VideoPlayer/VideoPlayer.hpp" />
+		<Unit filename="PhoneProject/Classes/all_headers.hpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
