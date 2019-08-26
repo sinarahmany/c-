@@ -14,4 +14,7 @@ void Player::setXp(int xp){this->xp == xp;}
 double Player::getBoost(){ return boost;}
 void Player::setBoost(double boost){this->boost = boost; }
 
+Player Player::multiply(const Player obj){
+    return Player(this->health,this->xp,(obj.boost*this->boost));
+}
 Player::~Player(){};

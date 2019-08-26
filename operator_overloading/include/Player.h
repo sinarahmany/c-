@@ -17,6 +17,8 @@ class Player
         void setXp(int xp);
         double getBoost();
         void setBoost(double boost);
+
+        Player multiply(const Player obj);
         ~Player();
 
 
