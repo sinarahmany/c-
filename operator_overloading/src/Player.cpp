@@ -17,4 +17,16 @@ void Player::setBoost(double boost){this->boost = boost; }
 Player Player::multiply(const Player obj){
     return Player(this->health,this->xp,(obj.boost*this->boost));
 }
+
+Player Player::add(const Player obj){
+    return Player(obj.health+this->health,obj.xp+this->xp,obj.boost);
+}
+
+Player Player::operator *(const Player obj){
+    return Player(this->health,this->xp,(obj.boost*this->boost));
+}
+
+Player Player::operator +(const Player obj){
+    return Player(obj.health+this->health,obj.xp+this->xp,obj.boost);
+}
 Player::~Player(){};

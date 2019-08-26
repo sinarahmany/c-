@@ -19,6 +19,9 @@ class Player
         void setBoost(double boost);
 
         Player multiply(const Player obj);
+        Player add (const Player obj);
+        Player operator *(const Player obj);
+        Player operator + (const Player obj);
         ~Player();
 
 
