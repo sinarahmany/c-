@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1566840268 source:c:\work\c++(code blocks)\operator_overloading\main.cpp
+	<iostream>
+	"Player.h"
+
+1566839820 c:\work\c++(code blocks)\operator_overloading\include\player.h
+	<iostream>
+	<fstream>
+
