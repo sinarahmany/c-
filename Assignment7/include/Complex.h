@@ -21,6 +21,10 @@ class Complex
         Complex operator + (const Complex obj);
         Complex operator - (const Complex obj);
         Complex operator == (const Complex obj);
+        Complex operator = (const Complex obj);
+        Complex operator ++ ();
+        Complex& operator -- ();
+        Complex operator -- (int);
         ~Complex();
 
     private:
