@@ -17,13 +17,18 @@
 //destructor
 //methods
 class PictureCamera : public Camera{
-    
+
 private:
-    
+
 protected:
-    
+
 public:
-    
+    virtual std::string ServiceName() override;
+    virtual std::string Can() override;
+    virtual std::string ProviderProperty()override;
+    virtual bool UseKeyboard()override;
+    bool TakePicture();
+
 };
 
 

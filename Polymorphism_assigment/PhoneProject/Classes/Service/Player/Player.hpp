@@ -17,13 +17,21 @@
 //destructor
 //methods
 class Player : public Service{
-    
+
 private:
-    
+    bool isPlaying;//default is false in xcode
+
 protected:
-    
+
 public:
-    
+    virtual std::string Can() override;
+    virtual std::string ServiceName() override;
+    virtual std::string ProviderProperty()override;
+    virtual bool UseKeyboard()override;
+    bool Play();
+    bool StopPlaying();
+
+
 };
 
 #endif /* Player_hpp */

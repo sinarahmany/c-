@@ -10,20 +10,23 @@
 
 #include <stdio.h>
 #include "../Service.hpp"
+#include <string>
 
-//create properties
-//getters and setters
-//constructors (default, overloaded, copy)
-//destructor
-//methods
 class ApplicationCenter : public Service{
-    
+
 private:
-    
+
 protected:
-    
+
 public:
-    
+    std::string DownloadApp(std::string appNmae);
+    std::string DeleteApp(std::string appNmae);
+    std::string OpenApp(std::string appNmae);
+    virtual std::string Can() override;
+    virtual std::string ServiceName() override;
+    virtual std::string ProviderProperty()override;
+    virtual bool UseKeyboard()override;
+
 };
 
 #endif /* ApplicationCenter_hpp */

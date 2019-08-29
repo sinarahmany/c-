@@ -1,32 +1,146 @@
 # depslib dependency file v1.0
-1566496378 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\applicationcenter\applicationcenter.cpp
+1567101398 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\applicationcenter\applicationcenter.cpp
 	"ApplicationCenter.hpp"
 
-1566496642 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\applicationcenter\applicationcenter.hpp
+1567105387 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\applicationcenter\applicationcenter.hpp
 	<stdio.h>
 	"../Service.hpp"
+	<string>
 
-1566497730 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\service.hpp
+1567106160 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\service.hpp
 	<stdio.h>
+	<string>
+	<iostream>
 
-1566496348 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calculator\calculator.cpp
+1567105129 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calculator\calculator.cpp
 	"Calculator.hpp"
+	<string>
 
-1566496632 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calculator\calculator.hpp
+1567104961 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calculator\calculator.hpp
+	<iostream>
 	<stdio.h>
 	"../Service.hpp"
+	<string>
 
-1566496452 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calendar\calendar.cpp
+1567101438 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calendar\calendar.cpp
 	"Calendar.hpp"
 
-1566496652 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calendar\calendar.hpp
+1567104965 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\calendar\calendar.hpp
+	<iostream>
 	<stdio.h>
 	"../Service.hpp"
+	<string>
 
-1566496140 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\camera.cpp
+1567101516 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\camera.cpp
 	"Camera.hpp"
 
-1566497726 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\camera.hpp
+1567104969 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\camera.hpp
+	<iostream>
 	<stdio.h>
 	"../Service.hpp"
+	<string>
+
+1567101461 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\picturecamera\picturecamera.cpp
+	"PictureCamera.hpp"
+
+1567102013 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\picturecamera\picturecamera.hpp
+	<stdio.h>
+	"../Camera.hpp"
+
+1567106252 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\videocamera\videocamera.cpp
+	"VideoCamera.hpp"
+
+1567107527 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\camera\videocamera\videocamera.hpp
+	<stdio.h>
+	"../Camera.hpp"
+
+1567101543 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\emailclient\emailclient.cpp
+	"EmailClient.hpp"
+
+1567105073 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\emailclient\emailclient.hpp
+	<string>
+	<stdio.h>
+	"../Service.hpp"
+	<iostream>
+
+1567101569 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\emailclient\gmail\gmail.cpp
+	"Gmail.hpp"
+
+1567102219 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\emailclient\gmail\gmail.hpp
+	<stdio.h>
+	<iostream>
+	"../EmailClient.hpp"
+	<string>
+
+1567101602 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\message\message.cpp
+	"Message.hpp"
+
+1567105051 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\message\message.hpp
+	<string>
+	<stdio.h>
+	"../Service.hpp"
+
+1567101626 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\phone\phone.cpp
+	"Phone.hpp"
+
+1567102328 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\phone\phone.hpp
+	<stdio.h>
+	"../Service.hpp"
+	<string>
+
+1567101654 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\player\musicplayer\musicplayer.cpp
+	"MusicPlayer.hpp"
+
+1567102376 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\player\musicplayer\musicplayer.hpp
+	<stdio.h>
+	"../Player.hpp"
+	<string>
+
+1567102454 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\player\player.hpp
+	<stdio.h>
+	"../Service.hpp"
+
+1567101698 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\player\player.cpp
+	"Player.hpp"
+
+1567101674 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\player\videoplayer\videoplayer.cpp
+	"VideoPlayer.hpp"
+
+1567102423 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\player\videoplayer\videoplayer.hpp
+	<stdio.h>
+	"../Player.hpp"
+	<string>
+
+1566496090 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\service.cpp
+	"Service.hpp"
+
+1567101754 source:c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\webbrowser\webbrowser.cpp
+	"WebBrowser.hpp"
+
+1567105655 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\service\webbrowser\webbrowser.hpp
+	<stdio.h>
+	"../Service.hpp"
+
+1567108498 source:c:\work\c++(code blocks)\polymorphism_assigment\main.cpp
+	<iostream>
+	"PhoneProject/Classes/all_headers.hpp"
+	<vector>
+
+1566503598 c:\work\c++(code blocks)\polymorphism_assigment\phoneproject\classes\all_headers.hpp
+	<stdio.h>
+	"Service/WebBrowser/WebBrowser.hpp"
+	"Service/EmailClient/EmailClient.hpp"
+	"Service/EmailClient/Gmail/Gmail.hpp"
+	"Service/Calendar/Calendar.hpp"
+	"Service/ApplicationCenter/ApplicationCenter.hpp"
+	"Service/Calculator/Calculator.hpp"
+	"Service/Message/Message.hpp"
+	"Service/Player/Player.hpp"
+	"Service/Player/VideoPlayer/VideoPlayer.hpp"
+	"Service/Player/MusicPlayer/MusicPlayer.hpp"
+	"Service/Camera/Camera.hpp"
+	"Service/Camera/PictureCamera/PictureCamera.hpp"
+	"Service/Camera/VideoCamera/VideoCamera.hpp"
+	"Service/Phone/Phone.hpp"
+	"Service/Service.hpp"
 

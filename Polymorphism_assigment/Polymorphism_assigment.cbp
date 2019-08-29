@@ -58,6 +58,10 @@
 		<Unit filename="PhoneProject/Classes/Service/Player/Player.hpp" />
 		<Unit filename="PhoneProject/Classes/Service/Player/VideoPlayer/VideoPlayer.cpp" />
 		<Unit filename="PhoneProject/Classes/Service/Player/VideoPlayer/VideoPlayer.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/Service.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/Service.hpp" />
+		<Unit filename="PhoneProject/Classes/Service/WebBrowser/WebBrowser.cpp" />
+		<Unit filename="PhoneProject/Classes/Service/WebBrowser/WebBrowser.hpp" />
 		<Unit filename="PhoneProject/Classes/all_headers.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

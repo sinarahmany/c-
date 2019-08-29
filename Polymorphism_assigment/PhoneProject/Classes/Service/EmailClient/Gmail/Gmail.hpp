@@ -11,20 +11,24 @@
 #include <stdio.h>
 #include <iostream>
 #include "../EmailClient.hpp"
+#include <string>
 
-//create properties
-//getters and setters
-//constructors (default, overloaded, copy)
-//destructor
-//methods
+
+
 class Gmail : public EmailClient{
-    
+
 private:
-    
+
 protected:
-    
+
 public:
     void test(){std::cout <<"gmail test";}
+    virtual std::string Can() override;
+    virtual std::string ServiceName() override;
+    virtual std::string ProviderProperty()override;
+    virtual bool UseKeyboard()override;
+    bool SignIn(std::string email);
+    bool SignOut();
 };
 
 #endif /* Gmail_hpp */

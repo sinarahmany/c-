@@ -16,14 +16,20 @@
 //constructors (default, overloaded, copy)
 //destructor
 //methods
-class VideoCamera : Camera{
-    
+class VideoCamera : public Camera{
+
 private:
-    
+    bool isRecording;
+
 protected:
-    
+
 public:
-    
+    bool Record();
+    bool StopRecording();
+    virtual std::string ServiceName() override;
+    virtual std::string Can() override;
+    virtual std::string ProviderProperty()override;
+    virtual bool UseKeyboard()override;
 };
 
 #endif /* VideoCamera_hpp */

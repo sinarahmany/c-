@@ -9,6 +9,8 @@
 #define Service_hpp
 
 #include <stdio.h>
+#include <string>
+#include <iostream>
 
 //create properties
 //getters and setters
@@ -16,16 +18,17 @@
 //destructor
 //methods
 class Service{
-    
-private:
-    
-protected:
-    
+
 public:
-    
+    virtual std::string ServiceName() = 0 ;
+    virtual std::string ProviderProperty() = 0;
+    virtual bool UseKeyboard() = 0;
+    virtual std::string Can() = 0;
+    virtual ~Service(){};
+private:
+
+
 };
-
-
 
 
 
