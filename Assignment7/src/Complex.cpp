@@ -1,4 +1,5 @@
 #include "Complex.h"
+#include <iostream>
 
 Complex::Complex (const Complex &copyObj){
     this->real = copyObj.real;
@@ -7,7 +8,7 @@ Complex::Complex (const Complex &copyObj){
 
 
 int Complex::getReal(){ return real;}
-void Complex::setReal(int real){this->real == real;}
+void Complex::setReal(int real){this->real = real;}
 
 int Complex::getImaginary(){ return imaginary;}
 void Complex::setImaginary(int imaginary){this->imaginary = imaginary; }
@@ -56,17 +57,7 @@ Complex Complex::operator --(int jj){
 Complex Complex::operator =(const Complex obj){
     return Complex(this->real=obj.real,this->imaginary=obj.imaginary);
 }
-// >>cin
-//++ operator
-Complex Complex::operator >>(){
-    cout<<"type your real number"<<endl;
-    int jj;
-    jj>>cin;
-    cout<<"type your Imaginary number"<<endl;
-    int ii;
-    ii>>cin;
-    return Complex(this->real=jj,this->imaginary=ii);
-}
+
 
 //Destractor
 Complex::~Complex(){};

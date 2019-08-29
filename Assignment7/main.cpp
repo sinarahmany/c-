@@ -54,4 +54,39 @@ int main()
     else{
         cout<<"!=true they are not equal"<<endl;
     }
+    bool flag=true;
+    string choice;
+    Complex mvm;
+    Complex compree(0,0);
+    while(flag==true){
+        cout<<"\n\n<< - to print \n>> to enter your own numbers"<<endl;
+        cin>>choice;
+
+           if(choice=="<<"){
+                cout <<"("<< mvm.getReal() <<","<< mvm.getImaginary()<<"i)"<<endl;
+           }
+            if (choice ==">>"){
+                cout<<"Type your first number"<<endl;
+                int rr;
+                cin>>rr;
+                mvm.setReal(rr);
+                cout<<"Type your second number"<<endl;
+                int ii;
+                cin>>ii;
+                mvm.setImaginary(ii);
+                cout <<"("<< mvm.getReal() <<","<< mvm.getImaginary()<<"i) \n"<<endl;
+            }
+            if (choice =="++"){
+                if(mvm.getReal() == compree.getReal()){
+                cout<<"you didn`t type the new number yet"<<endl;
+                }
+            else{
+                Complex plusmvm = ++ mvm ;
+                mvm = plusmvm;
+                cout <<"("<< mvm.getReal() <<","<< mvm.getImaginary()<<"i) \n"<<endl;}
+            }
+
+    }
+
+
 }

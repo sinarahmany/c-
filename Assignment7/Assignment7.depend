@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1567021602 source:c:\work\c++(code blocks)\assignment7\src\complex.cpp
+1567052526 source:c:\work\c++(code blocks)\assignment7\src\complex.cpp
 	"Complex.h"
+	<iostream>
 
-1567022309 c:\work\c++(code blocks)\assignment7\include\complex.h
+1567051937 c:\work\c++(code blocks)\assignment7\include\complex.h
 	<iostream>
 	<functional>
 
-1567022013 source:c:\work\c++(code blocks)\assignment7\main.cpp
+1567052482 source:c:\work\c++(code blocks)\assignment7\main.cpp
 	<iostream>
 	"complex.h"
 	<functional>

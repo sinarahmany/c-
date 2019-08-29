@@ -2,7 +2,7 @@
 #define COMPLEX_H
 #include <iostream>
 #include <functional>
-
+using namespace std;
 
 class Complex
 {
@@ -24,10 +24,10 @@ class Complex
         Complex operator != (const Complex obj);
         Complex operator = (const Complex obj);
         Complex operator ++ ();
-        Complex operator >> ();
         Complex& operator -- ();
         Complex operator -- (int);
         ~Complex();
+
 
     private:
         int real;
