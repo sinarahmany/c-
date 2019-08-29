@@ -5,7 +5,8 @@ using namespace std;
 
 int main()
 {
-    //Complex reallycomplex(5,2) ;
+    cout<<"------------Hey i`m Sina wellcome to my program----------------- \n"<<endl;
+
     Complex reallycomplex(1,-4) ;
     Complex notthatmuch(1,-4);
     //plus operator
@@ -40,4 +41,17 @@ int main()
     // -- operator
     Complex Minusminus2 = --notthatmuch  ;
     cout<<"-- operator =  "<<Minusminus2.getReal()<<","<<Minusminus2.getImaginary()<<"i"<<endl;
+
+    //uncomparing operator
+    Complex UnCompare = notthatmuch == reallycomplex;
+
+    cout<<"("<<reallycomplex.getReal()<<","<<reallycomplex.getImaginary()<<"i) == ("
+    <<notthatmuch.getReal()<<","<<notthatmuch.getImaginary()<<"i) ->  ";
+
+    if(UnCompare.getReal()!=1){
+        cout<<"!=false they are equal"<<endl;
+    }
+    else{
+        cout<<"!=true they are not equal"<<endl;
+    }
 }

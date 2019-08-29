@@ -7,27 +7,36 @@
 
 class Truck : public Vehicle
 {
-    public:
-        Truck();
-        ~Truck();
-        //getters
-        std::string getCabSize() const;
-        int getHorsePower() const;
-        bool getHasWinch() const;
-        //setters
-        std::string setCabSize(std::string CabSize) const;
-        int setHorsePower(int HorsePower) const;
-        bool setHasWinch(bool HasWinch) const;
-        //overloaded const...
-        Truck(std::string CabSizeval,int HPval,bool HasWinchval);
-        //copy constr...
-        Truck(const Truck &obj);
 
+private:
 
-    private:
-        std::string CabSize;
-        int HorsePower;
-        bool HasWinch;
+    bool cabSize;
+    int horsePower;
+    bool hasWinch;
+
+public:
+    //default constructor
+    Truck();
+    //overloaded constructor
+    Truck(bool cabSize, int horsePower, bool hasWinch,int vin ,std::string make,std::string model,std::string color);
+    Truck(bool cabSize, int horsePower, bool hasWinch);
+    //copy constructor
+    Truck(Truck const &obj);
+    //destructor
+    ~Truck();
+
+    //setter
+    void setCabSize(bool cabSize);
+    void setHorsePower(int horsePower);
+    void setHasWinch(bool hasWinch);
+
+    //getter
+    bool getCabSize();
+    int getHorsePower();
+    bool getHasWinch();
+
+    //functions
+        void toString();
 };
 
 #endif // TRUCK_H

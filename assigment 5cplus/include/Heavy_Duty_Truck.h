@@ -7,23 +7,33 @@
 
 class Heavy_Duty_Truck :public Truck
 {
-    public:
-        Heavy_Duty_Truck();
-        ~Heavy_Duty_Truck();
-        //getters
-        double getTonnage() const;
-        int getNoOfWheels() const;
+private:
 
-        //setters
-        double setTonnage(double Tonnage) const;
-        int setNoOfWheels(int NoOfWheels) const;
-        //copy constr...
-        Heavy_Duty_Truck(const Heavy_Duty_Truck &obj);
+    double tonnage;
+    int numberOfWheels;
 
 
-    private:
-        double Tonnage;
-        int NoOfWheels;
+public:
+    //default constructor
+    Heavy_Duty_Truck();
+    //overloaded constructor
+    Heavy_Duty_Truck(double tonnage, int numberOfWheels,bool cabSize, int horsePower, bool hasWinch);
+    //copy constructor
+    Heavy_Duty_Truck(Heavy_Duty_Truck const &obj);
+    //destructor
+    ~Heavy_Duty_Truck();
+
+    //setter
+    void setTonnage(double tonnage);
+    void setNumberOfWheels(int numberOfWheels);
+
+    //getter
+    double getTonnage();
+    int getNumberOfWheels();
+
+    //functions
+        void toString();
+
 };
 
 #endif // HEAVY_DUTY_TRUCK_H

@@ -1,34 +1,42 @@
 #include "Heavy_Duty_Truck.h"
 
 
+//defult constructor
+Heavy_Duty_Truck::Heavy_Duty_Truck()
+:Heavy_Duty_Truck(0,0,1,0,1){}
 
-//default constructor
-Heavy_Duty_Truck::Heavy_Duty_Truck() : Tonnage{ 1 },NoOfWheels{ 0 }
-{
-	std::cout << "Heavy_Duty_Truck default constructor called!" << std::endl;
+//overloaded constructor
+
+Heavy_Duty_Truck::Heavy_Duty_Truck(double tonnage, int numberOfWheels,bool cabSize, int horsePower, bool hasWinch):Truck(cabSize,horsePower,hasWinch){
+    this->tonnage = tonnage;
+    this->numberOfWheels = numberOfWheels;
 }
-
-//destructor
-Heavy_Duty_Truck::~Heavy_Duty_Truck() {
-	std::cout << "Heavy_Duty_Truck desctructor called!" << std::endl;
-}
-
 //copy constructor
-Heavy_Duty_Truck::Heavy_Duty_Truck(const Heavy_Duty_Truck &obj): Tonnage {obj.Tonnage}, NoOfWheels{ obj.NoOfWheels}{}
+Heavy_Duty_Truck::Heavy_Duty_Truck(Heavy_Duty_Truck const &obj){}
+//destructor
+Heavy_Duty_Truck::~Heavy_Duty_Truck(){}
 
-//getters
-double Heavy_Duty_Truck::getTonnage() const {
-	return Tonnage;
+//setter
+void Heavy_Duty_Truck::setTonnage(double tonnage){
+    this->tonnage = tonnage;
 }
-int Heavy_Duty_Truck::getNoOfWheels() const {
-	return NoOfWheels;
+
+void Heavy_Duty_Truck::setNumberOfWheels(int numberOfWheels){
+    this->numberOfWheels = numberOfWheels;
+}
+
+//getter
+double Heavy_Duty_Truck::getTonnage(){
+    return this->tonnage;
+}
+int Heavy_Duty_Truck::getNumberOfWheels(){
+    return this->numberOfWheels;
 }
 
 
-//setters
-double Heavy_Duty_Truck::setTonnage(double Tonnage) const {
-    Tonnage=Tonnage;
-}
-int Heavy_Duty_Truck::setNoOfWheels(int NoOfWheels) const {
-	 NoOfWheels=NoOfWheels;
+
+//functions
+void Heavy_Duty_Truck::toString(){
+    Truck::toString();
+    std::cout <<"[" << "Tonnage:" << this->tonnage <<"  NumberOfWheels:"<< this->numberOfWheels << "]" << std::endl;
 }

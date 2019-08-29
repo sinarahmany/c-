@@ -1,34 +1,42 @@
 #include "Passenger_vehicle.h"
 #include <iomanip>
 #include <iostream>
+//defult constructor
+Passenger_vehicle::Passenger_vehicle()
+:Passenger_vehicle("nothing",0,0 ,"nothing","nothing","nothing"){}
 
-//default constructor
-Passenger_vehicle::Passenger_vehicle() : type{ "unknown type"} ,NoOfPassengers{ 0 }
-{
-	std::cout << "Passenger_vehicle default constructor called!" << std::endl;
+//overloaded constructor
+
+Passenger_vehicle::Passenger_vehicle(std::string type, int numberOfPassengers, int vin ,std::string make,std::string model,std::string color):Vehicle(vin ,make, model, color){
+    this->type = type;
+    this->numberOfPassengers = numberOfPassengers;
 }
-
-//destructor
-Passenger_vehicle::~Passenger_vehicle() {
-	std::cout << "Passenger_vehicle desctructor called!" << std::endl;
-}
-
 //copy constructor
-Passenger_vehicle::Passenger_vehicle(const Passenger_vehicle &obj): type {obj.type}, NoOfPassengers {obj.NoOfPassengers}{}
+Passenger_vehicle::Passenger_vehicle(Passenger_vehicle const &obj){}
+//destructor
+Passenger_vehicle::~Passenger_vehicle(){}
 
-//getters
-std::string Passenger_vehicle::getType() const {
-	return type;
-}
-int Passenger_vehicle::getNoOfPassengers() const {
-	return NoOfPassengers;
-}
-
-//setters
-std::string Passenger_vehicle::setType(std::string type) const {
-    type=type;
-}
-int Passenger_vehicle::setNoOfPassengers(int NoOfPassengers) const {
-	 NoOfPassengers=NoOfPassengers;
+//setter
+void Passenger_vehicle::setUsage(std::string type){
+    this->type = type;
 }
 
+void Passenger_vehicle::setLength(int numberOfPassengers){
+    this->numberOfPassengers = numberOfPassengers;
+}
+
+//getter
+std::string Passenger_vehicle::getType(){
+    return this->type;
+}
+int Passenger_vehicle::getNumberOfPassengers(){
+    return this->numberOfPassengers;
+}
+
+
+
+//functions
+void Passenger_vehicle::toString(){
+     Vehicle::toString();
+    std::cout <<"[" << "Type:" << this->type <<"  NumberOfPassengers:"<< this->numberOfPassengers << "]" << std::endl;
+}

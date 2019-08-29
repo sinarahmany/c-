@@ -1,33 +1,42 @@
 #include "Pickup.h"
 
 
+//defult constructor
+Pickup::Pickup()
+:Pickup("nothing",0,1,0,1){}
 
-//default constructor
-Pickup::Pickup() : Usage{ "unknown Usage" },Length{ 1 }
-{
-	std::cout << "Pickup default constructor called!" << std::endl;
+//overloaded constructor
+
+Pickup::Pickup(std::string usage, int length,bool cabSize, int horsePower, bool hasWinch):Truck(cabSize,horsePower,hasWinch){
+    this->usage = usage;
+    this->length = length;
 }
-
-//destructor
-Pickup::~Pickup() {
-	std::cout << "Pickup desctructor called!" << std::endl;
-}
-
 //copy constructor
-Pickup::Pickup(const Pickup &obj): Usage {obj.Usage}, Length {obj.Length}{}
+Pickup::Pickup(Pickup const &obj){}
+//destructor
+Pickup::~Pickup(){}
 
-//getters
-std::string Pickup::getUsage() const {
-	return Usage;
-}
-int Pickup::getLength() const {
-	return Length;
+//setter
+void Pickup::setUsage(std::string usage){
+    this->usage = usage;
 }
 
-//setters
-std::string Pickup::setUsage(std::string Usage) const {
-    Usage=Usage;
+void Pickup::setLength(int length){
+    this->length = length;
 }
-int Pickup::setLength(int Length) const {
-	 Length=Length;
+
+//getter
+std::string Pickup::getUsage(){
+    return this->usage;
+}
+int Pickup::getLength(){
+    return this->length;
+}
+
+
+
+//functions
+void Pickup::toString(){
+    Truck::toString();
+    std::cout <<"[" << "Usage:" << this->usage <<"  Length:"<< this->length << "]" << std::endl;
 }

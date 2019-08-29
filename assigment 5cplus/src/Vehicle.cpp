@@ -4,43 +4,56 @@
 
 
 //default constructor
-Vehicle::Vehicle() : Make{ "unknown make" }, model{ "unknown model" }, color{"White"},VIN{ 0000 }
-{
-	std::cout << "Vehicle default constructor called!" << std::endl;
-}
+Vehicle::Vehicle()
+:Vehicle(0 ,"nothing","nothing","nothing"){}
+
 //overloaded constructor
-Vehicle::Vehicle(std::string Makeval, std::string modelval,std::string colorval ,int VINval)
-	: Make{ Makeval }, model {modelval},color{ colorval }, VIN{ VINval }
-{
-	std::cout << "Vehicle overload constructor called!" << std::endl;
-}
 
-//destructor
-Vehicle::~Vehicle() {
-	std::cout << "Vehicle desctructor called!" << std::endl;
+Vehicle::Vehicle(int vin ,std::string make,std::string model,std::string color){
+    this->vin = vin;
+    this->make = make;
+    this->model = model;
+    this->color = color;
 }
-
 //copy constructor
-Vehicle::Vehicle(const Vehicle &obj): Make {obj.Make}, model{ obj.model}, color {obj.color}{}
+Vehicle::Vehicle(Vehicle const &obj){}
+//destructor
+Vehicle::~Vehicle(){}
 
-//getters
-std::string Vehicle::getMake() const {
-	return Make;
-}
-std::string Vehicle::getModel() const {
-	return model;
-}
-std::string Vehicle::getcolor() const {
-	return color;
+  //setter
+void Vehicle::setVin(int vin){
+    this->vin = vin;
 }
 
-//setters
-std::string Vehicle::setMake(std::string Make) const {
-    Make=Make;
+void Vehicle::setMake(std::string make){
+    this->make = make;
 }
-std::string Vehicle::setModel(std::string model) const {
-	 model=model;
+
+void Vehicle::setModel(std::string model){
+    this->model = model;
 }
-std::string Vehicle::setcolor(std::string color) const {
-	 color=color;
+
+void Vehicle::setColor(std::string color){
+    this->color = color;
+}
+
+
+//getter
+int Vehicle::getVin(){
+    return this->vin;
+}
+std::string Vehicle::getMake(){
+    return this->make;
+}
+std::string Vehicle::getModel(){
+    return this->model;
+}
+std::string Vehicle::getColor(){
+    return this->color;
+}
+
+
+//functions
+void Vehicle::toString(){
+    std::cout <<"[" << "VIN:" << this->vin <<"  Make:"<< this->make <<"  Model:"<< this->model <<"  Color:"<< this->color << "]" << std::endl;
 }

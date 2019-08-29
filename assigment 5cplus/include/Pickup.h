@@ -7,21 +7,32 @@
 
 class Pickup :public Truck
 {
-    public:
-        Pickup();
-        ~Pickup();
-        //getters
-        std::string getUsage() const;
-        int getLength() const;
-        //setters
-        std::string setUsage(std::string Usage) const;
-        int setLength(int Length) const;
-        //copy constr...
-        Pickup(const Pickup &obj);
+private:
 
-    private:
-        std::string Usage;
-        int Length;
+    std::string usage;
+    int length;
+
+
+public:
+    //default constructor
+    Pickup();
+    //overloaded constructor
+    Pickup(std::string usage, int length,bool cabSize, int horsePower, bool hasWinch);
+    //copy constructor
+    Pickup(Pickup const &obj);
+    //destructor
+    ~Pickup();
+
+    //setter
+    void setUsage(std::string usage);
+    void setLength(int length);
+
+    //getter
+    std::string getUsage();
+    int getLength();
+
+    //functions
+        void toString();
 };
 
 #endif // PICKUP_H

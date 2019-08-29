@@ -30,6 +30,12 @@ Complex Complex::operator ==(const Complex obj){
     if(obj.real==this->real && obj.imaginary==this->imaginary){
     return Complex(1,1); }
 }
+
+//uncomparing operator
+Complex Complex::operator!=(const Complex obj){
+    if(obj.real==this->real && obj.imaginary==this->imaginary){
+    return Complex(1,1); }
+}
 //++ operator
 Complex Complex::operator ++(){
     return Complex(this->real+1,this->imaginary);
@@ -50,5 +56,17 @@ Complex Complex::operator --(int jj){
 Complex Complex::operator =(const Complex obj){
     return Complex(this->real=obj.real,this->imaginary=obj.imaginary);
 }
+// >>cin
+//++ operator
+Complex Complex::operator >>(){
+    cout<<"type your real number"<<endl;
+    int jj;
+    jj>>cin;
+    cout<<"type your Imaginary number"<<endl;
+    int ii;
+    ii>>cin;
+    return Complex(this->real=jj,this->imaginary=ii);
+}
+
 //Destractor
 Complex::~Complex(){};

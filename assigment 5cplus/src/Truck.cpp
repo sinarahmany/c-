@@ -2,45 +2,52 @@
 
 
 //default constructor
-Truck::Truck() : CabSize{ "zero" }, HorsePower{ 0 }, HasWinch{true}
-{
-	std::cout << "Truck default constructor called!" << std::endl;
-}
-
-//destructor
-Truck::~Truck() {
-	std::cout << "Truck desctructor called!" << std::endl;
-}
+Truck::Truck()
+:Truck(1,0,1,0 ,"nothing","nothing","nothing"){}
 
 //overloaded constructor
-Truck::Truck(std::string CabSizeval, int HPval,bool HasWinchval)
-	: CabSize{ CabSizeval }, HorsePower{ HPval} ,HasWinch {HasWinchval}
-{
-	std::cout << "Truck overload constructor called!" << std::endl;
+Truck::Truck(bool cabSize, int horsePower, bool hasWinch):Truck(cabSize,horsePower,hasWinch,
+            182710 ,"nothing","nothing","nothing"){
+
 }
-
-
+Truck::Truck(bool cabSize, int horsePower, bool hasWinch,int vin ,std::string make,std::string model,std::string color):Vehicle(vin ,make, model, color){
+    this->cabSize = cabSize;
+    this->horsePower = horsePower;
+    this->hasWinch = hasWinch;
+}
 //copy constructor
-Truck::Truck(const Truck &obj): CabSize {obj.CabSize}, HorsePower{ obj.HorsePower}, HasWinch {obj.HasWinch}{}
+Truck::Truck(Truck const &obj){}
+//destructor
+Truck::~Truck(){}
 
-//getters
-std::string Truck::getCabSize() const {
-	return CabSize;
-}
-int Truck::getHorsePower() const {
-	return HorsePower;
-}
-bool Truck::getHasWinch() const {
-	return HasWinch;
+//setter
+void Truck::setCabSize(bool cabSize){
+    this->cabSize = cabSize;
 }
 
-//setters
-std::string Truck::setCabSize(std::string CabSize) const {
-    CabSize=CabSize;
+void Truck::setHorsePower(int horsePower){
+    this->horsePower = horsePower;
 }
-int Truck::setHorsePower(int HorsePower) const {
-	 HorsePower=HorsePower;
+
+void Truck::setHasWinch(bool hasWinch){
+    this->hasWinch = hasWinch;
 }
-bool Truck::setHasWinch(bool HasWinch) const {
-	 HasWinch=HasWinch;
+
+//getter
+bool Truck::getCabSize(){
+    return this->cabSize;
+}
+int Truck::getHorsePower(){
+    return this->horsePower;
+}
+bool Truck::getHasWinch(){
+    return this->hasWinch;
+}
+
+
+
+//functions
+void Truck::toString(){
+    Vehicle::toString();
+    std::cout <<"[" << "Cab Size:" << this->cabSize <<"  HorsePower:"<< this->horsePower <<"  HasWinch:"<< this->hasWinch << "]" << std::endl;
 }

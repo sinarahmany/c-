@@ -7,25 +7,34 @@
 
 class Passenger_vehicle : public Vehicle
 {
-    public:
-        Passenger_vehicle();
-        ~Passenger_vehicle();
-        //getters
-        std::string getType() const;
-        int getNoOfPassengers() const;
 
-        //setters
-        std::string setType(std::string type) const;
-        int setNoOfPassengers(int model) const;
+private:
 
-        //copy constr...
-        Passenger_vehicle(const Passenger_vehicle &obj);
-
-
-
-    private:
     std::string type;
-    int NoOfPassengers;
+    int numberOfPassengers;
+
+
+public:
+    //default constructor
+    Passenger_vehicle();
+    //overloaded constructor
+    Passenger_vehicle(std::string type, int numberOfPassengers,int vin ,std::string make,std::string model,std::string color);
+    //copy constructor
+    Passenger_vehicle(Passenger_vehicle const &obj);
+    //destructor
+    ~Passenger_vehicle();
+
+    //setter
+    void setUsage(std::string type);
+    void setLength(int numberOfPassengers);
+
+    //getter
+    std::string getType();
+    int getNumberOfPassengers();
+
+    //functions
+        void toString();
+
 };
 
 #endif // PASSENGER_VEHICLE_H

@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1566502203 source:c:\work\c++(code blocks)\assigment 5cplus\src\vehicle.cpp
+1567043522 source:c:\work\c++(code blocks)\assigment 5cplus\src\vehicle.cpp
 	"Vehicle.h"
 	<iomanip>
 	<iostream>
 
-1566501194 c:\work\c++(code blocks)\assigment 5cplus\include\vehicle.h
+1567043742 c:\work\c++(code blocks)\assigment 5cplus\include\vehicle.h
 	<string.h>
 	<iostream>
 
-1566501318 source:c:\work\c++(code blocks)\assigment 5cplus\main.cpp
+1567044175 source:c:\work\c++(code blocks)\assigment 5cplus\main.cpp
 	<iostream>
 	<string.h>
 	"Vehicle.h"
@@ -17,36 +17,36 @@
 	"Pickup.h"
 	"Truck.h"
 
-1566502535 source:c:\work\c++(code blocks)\assigment 5cplus\src\truck.cpp
+1567043476 source:c:\work\c++(code blocks)\assigment 5cplus\src\truck.cpp
 	"Truck.h"
 
-1566502535 c:\work\c++(code blocks)\assigment 5cplus\include\truck.h
+1567043715 c:\work\c++(code blocks)\assigment 5cplus\include\truck.h
 	<iostream>
 	<string.h>
 	<Vehicle.h>
 
-1566498963 source:c:\work\c++(code blocks)\assigment 5cplus\src\heavy_duty_truck.cpp
+1567043871 source:c:\work\c++(code blocks)\assigment 5cplus\src\heavy_duty_truck.cpp
 	"Heavy_Duty_Truck.h"
 
-1566498766 c:\work\c++(code blocks)\assigment 5cplus\include\heavy_duty_truck.h
+1567043870 c:\work\c++(code blocks)\assigment 5cplus\include\heavy_duty_truck.h
 	<string.h>
 	<iostream>
 	"Truck.h"
 
-1566501128 source:c:\work\c++(code blocks)\assigment 5cplus\src\passenger_vehicle.cpp
+1567043939 source:c:\work\c++(code blocks)\assigment 5cplus\src\passenger_vehicle.cpp
 	"Passenger_vehicle.h"
 	<iomanip>
 	<iostream>
 
-1566497170 c:\work\c++(code blocks)\assigment 5cplus\include\passenger_vehicle.h
+1567043898 c:\work\c++(code blocks)\assigment 5cplus\include\passenger_vehicle.h
 	<Vehicle.h>
 	<string.h>
 	<iostream>
 
-1566499391 source:c:\work\c++(code blocks)\assigment 5cplus\src\pickup.cpp
+1567043448 source:c:\work\c++(code blocks)\assigment 5cplus\src\pickup.cpp
 	"Pickup.h"
 
-1566499343 c:\work\c++(code blocks)\assigment 5cplus\include\pickup.h
+1567043679 c:\work\c++(code blocks)\assigment 5cplus\include\pickup.h
 	"Truck.h"
 	<string.h>
 	<iostream>

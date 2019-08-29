@@ -11,13 +11,25 @@ using namespace std;
 
 int main()
 {
+    Vehicle bla(66 ,"bnm","3014","red");
+    bla.toString();
 
-    Vehicle car1("f","dd","dd",3);
-    Truck truck1("zero",0,true);
-    Passenger_vehicle passenger1();
-    Pickup Pick1();
-    Heavy_Duty_Truck HDT();
 
-    cout << "Goodbye cruel world!" << endl;
+    Truck trk(2,430,0,4,"mnb", "zxc","red");
+    trk.toString();
+
+
+
+    Heavy_Duty_Truck volvo(7.9, 6, 22, 222, 0);
+    volvo.setVin(999);
+    volvo.toString();
+
+
+    Pickup pk2("4*4",3,3,290,0);
+    pk2.toString();
+
+
+    Passenger_vehicle passvih("sport", 2,90,"nbm","nmn","blue");
+    passvih.toString();
     return 0;
 }
