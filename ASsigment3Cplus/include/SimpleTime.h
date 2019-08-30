@@ -8,45 +8,40 @@
 class SimpleTime
 {
     public:
-        //setters
-        void setHour(int Hour);
-        void setMinute(int Minute);
-        void setSecond(int Second);
-        void setZone(std::string Zone);
-
-
-        //getters
-        int getHour();
-        int getMinute();
-        int getSecond();
-        std::string getZone();
-
-        //default constructor
         SimpleTime();
-        //overloaded constructor
-        Simpletime(int Hour,int Minute,int Second,std::string Zone);
-
-
-        //Functions
+        SimpleTime(int,int,int, std::string);
+        SimpleTime(SimpleTime *);
+        ~SimpleTime();
+        //getters setters
+        void setTime(int,int,int, std::string);
+        void setHour(int);
+        int getHour();
+        void setMinute(int);
+        int getMinute();
+        void setSecond(int);
+        int getSecond();
+        void setZone(std::string);
+        std::string getZone();
         void printCivilian();
         void printMilitary();
         void printZulu();
-        bool checkTime(int, int, int);
+        //functions for hour minute and second
+        std::string strHour();
+        std::string strMinute();
+        std::string strSecond();
+
+
+
+    private:
+        int hour;
+        int minute;
+        int second;
+        std::string zone;
+         bool checkTime(int, int, int);
         bool checkHour(int);
         bool checkMinute(int);
         bool checkSecond(int);
 
 
-
-
-
-
-    private:
-        int Hour;
-        int Minute;
-        int Second;
-        std::string Zone;
-
 };
-
 #endif // SIMPLETIME_H

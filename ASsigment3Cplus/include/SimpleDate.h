@@ -8,31 +8,37 @@ class SimpleDate
 {
     private:
 
-        int Day;
-        int Month;
-        int Year;
-        std::string DayOfWeek;
+        int day;
+        int month;
+        int year;
+        std::string dayofweek;
+
+        bool checkDate(int, int, int);
+        bool checkDay(int);
+        bool checkMonth(int);
+        bool checkYear(int);
 
     public:
-        //setters
-        void setDay(int Day);
-        void setMonth(int Month);
-        void setYear(int Year);
-        void setDayOfWeek(std::string DayOfWeek);
-
-
-        //getters
-        int getDay();
-        int getMonth();
-        int getYear();
-        std::string getDayOfWeek();
-        //default constructor
         SimpleDate();
-        //overloaded constructor
-        SimpleDate(int Day,int Month,int Year,std::string DayOfWeek);
-        void print();
-        bool checkDate(int, int, int);
+        SimpleDate(int, int, int, std::string);
+        SimpleDate(const SimpleDate *);
+        ~SimpleDate();
 
+        void setDate(int, int, int, std::string);
+
+        int getDay();
+        void setDay(int);
+        int getMonth();
+        void setMonth(int);
+        int getYear();
+        void setYear(int);
+        std::string getDOW();
+        void setDOW(std::string);
+
+        void print();
+        std::string strMonth();
+        std::string strDay();
+        std::string strYear();
 
 
 
