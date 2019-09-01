@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1567233521 source:c:\work\c++(code blocks)\midterm\src\bird.cpp
+	"Bird.h"
+
+1567233291 c:\work\c++(code blocks)\midterm\include\bird.h
+	<string.h>
+	<iostream>
+	"Animal.h"
+	"../Date.hpp"
+
+1567233956 c:\work\c++(code blocks)\midterm\include\animal.h
+	<string>
+	<stdio.h>
+	"../Date.hpp"
+	<iostream>
+
+1567233579 source:c:\work\c++(code blocks)\midterm\src\mammal.cpp
+	"Mammal.h"
+
+1567233393 c:\work\c++(code blocks)\midterm\include\mammal.h
+	<string.h>
+	<iostream>
+	"Animal.h"
+	"../Date.hpp"
+
+1567234004 source:c:\work\c++(code blocks)\midterm\src\animal.cpp
+	"Animal.h"
+
+1567234344 source:c:\work\c++(code blocks)\midterm\main.cpp
+	<iostream>
+	<fstream>
+	<string.h>
+	<vector>
+	<ctype.h>
+	<iomanip>
+	<sstream>
+	"Date.hpp"
+	"Mammal.h"
+	"Bird.h"
+	"functions.hpp"
+
+1567188569 c:\work\c++(code blocks)\midterm\include\viranim.h
+	<stdio.h>
+	<string>
+	<iostream>
+
+1567202458 source:c:\work\c++(code blocks)\midterm\date.cpp
+	"Date.hpp"
+	<string>
+
+1567201444 c:\work\c++(code blocks)\midterm\date.hpp
+	<stdio.h>
+	<iostream>
+	<string>
+
+1567234418 source:c:\work\c++(code blocks)\midterm\functions.cpp
+	"functions.hpp"
+	<iostream>
+	<string>
+	<fstream>
+	"Animal.h"
+	"Bird.h"
+	"Mammal.h"
+
+1567232815 c:\work\c++(code blocks)\midterm\functions.hpp
+	<stdio.h>
+	<string>
+	"Animal.h"
+	"Bird.h"
+	"Mammal.h"
+	<iostream>
+
