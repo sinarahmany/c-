@@ -1,31 +1,31 @@
 #include <iostream>
+#include <memory>
 
 using namespace std;
-class A{
+class IceCream{
+private :
+    string flavor;
 public :
-    A(){cout<<"A is born"<<endl;}
-    virtual ~A(){cout<<"A is dead"<<endl;}
-};
-class B: public A{
-public :
-    bool eatMeat;
-    B(){cout<<"B is born"<<endl;}
-    ~B(){cout<<"B is dead"<<endl;}
-};
-class C: public A{
-public :
-    bool isWild;
-    C(){cout<<"C is born"<<endl;}
-    ~C(){cout<<"C is dead"<<endl;}
+    IceCream(){
+    this->flavor= " Vanila ";
+    cout<<"Icecream is created"<<this->flavor<<endl;
+    }
+    string getFlavor(){
+        return this->flavor;
+    }
+    ~IceCream(){
+        cout<<"IceCream has eaten!! "<<endl;
+    }
+
 };
 int main()
-{
-    A a;
-    B b;
-    C c;
-    A *aptr =new B();
-    A* arr[2] = {new B(), new C()};//polymorphic design
+{   //these 3 are all the same
+    //unique_ptr<IceCream> icecream{new IceCream()};
+    //unique_ptr<IceCream> icecream=make_unique<IceCream>();
+    auto icecream=make_unique<IceCream>();//recommended
 
-    dynamic_cast<B*>(arr[0])->eatMeat = false;
-    return 0;
+    int *a = new int(10);
+    int *b = a;
+    int *c = a;
+    cout<<*c;
 }
