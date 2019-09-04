@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1567535045 source:c:\work\c++(code blocks)\testing\main.cpp
+	<iostream>
+	<memory>
+
