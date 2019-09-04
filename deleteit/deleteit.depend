@@ -1,4 +1,11 @@
 # depslib dependency file v1.0
-1567621720 source:c:\work\c++(code blocks)\deleteit\main.cpp
+1567623525 source:c:\work\c++(code blocks)\deleteit\main.cpp
 	<iostream>
+	"func.h"
+
+1567623541 c:\work\c++(code blocks)\deleteit\include\func.h
+	<iostream>
+
+1567623311 source:c:\work\c++(code blocks)\deleteit\src\func.cpp
+	"func.h"
 
