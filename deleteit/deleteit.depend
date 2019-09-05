@@ -1,11 +1,19 @@
 # depslib dependency file v1.0
-1567623525 source:c:\work\c++(code blocks)\deleteit\main.cpp
+1567625628 source:c:\work\c++(code blocks)\deleteit\main.cpp
 	<iostream>
 	"func.h"
+	"Beer.h"
+	<vector>
 
 1567623541 c:\work\c++(code blocks)\deleteit\include\func.h
 	<iostream>
 
 1567623311 source:c:\work\c++(code blocks)\deleteit\src\func.cpp
 	"func.h"
+
+1567624117 source:c:\work\c++(code blocks)\deleteit\src\beer.cpp
+	"Beer.h"
+
+1567624914 c:\work\c++(code blocks)\deleteit\include\beer.h
+	<iostream>
 
