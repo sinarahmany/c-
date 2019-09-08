@@ -63,7 +63,7 @@ int main() {
 
 			case 9:
 				list.isEmpty();
-				//std::cout<<bool(list.isEmpty())<<std::endl;
+				std::cout<<std::boolalpha<<list.isEmpty()<<std::endl;
 				break;
 
 			case 10:

@@ -42,24 +42,24 @@ public:
 
 	//this method will return the size of the linked list
 	int size() {
-//        Nodeptr * current = StartNode;
-//        while(current!=NULL){
-//            current = current->next;
-//            count=count+1;
-//        }
-//        printf("The size of This ,is : %d \n",count);
-//        return count;
-//        }
+	    int counter =0;
+        Node * currentNode = new Node();
+	    currentNode = startPtr;
+	    while(currentNode!=nullptr){
+        currentNode = currentNode->nextPtr;
+        counter=counter+1;}
+        std::cout<<"The size of the list is : "<<counter<<std::endl;
 	}
 
 	//this method will return the first element in the list
 	int front() {
-		return -1;
+
+		std::cout<<"The first item in link list is :"<<startPtr->getData()<<std::endl;
 	}
 
 	//this method will return the Node in the back
 	int back() {
-		return endPtr->getData();
+		std::cout<<"The last item in link list is :"<<endPtr->getData()<<std::endl;
 	}
 
 	//this method will add a Node to the end
@@ -72,11 +72,16 @@ public:
             startPtr = nPtr;
             endPtr =nPtr;
 	    }else{
+//	        if(startPtr==endPtr){
+//                startPtr =nullptr;
+//                free(startPtr);
+//	        }
 
 	        nPtr->prevPtr= endPtr;
 	        nPtr->nextPtr= nullptr;
 	        endPtr->nextPtr = nPtr;
             endPtr = nPtr;
+
 	    }
 
 	}
@@ -113,16 +118,16 @@ public:
             startPtr = nPtr;
             endPtr =nPtr;
 	    }else{
-	        if(startPtr==endPtr){
-                startPtr =nullptr;
-                free(startPtr);
-	        }else{
+//	        if(startPtr==endPtr){
+//                startPtr =nullptr;
+//                free(startPtr);
+//	        }else{
 
 	        nPtr->nextPtr= startPtr;
 	        nPtr->prevPtr= nullptr;
 	        startPtr->prevPtr = nPtr;
             startPtr = nPtr;
-	        }
+
 
 
 	    }
@@ -148,32 +153,40 @@ public:
 
 	//this method will reset all the Nodes
 	void clear() {
-//	    delete nPtr;
+	    startPtr = nullptr;
+	    endPtr = nullptr;
+	    std::cout<<"List is cleared successfully"<<std::endl;
 	}
 
 	//this method will return true if the list is empty
 	//				   return false if the list is not empty
 	bool isEmpty() const
 	{
-		return (startPtr == nullptr);
+		if (startPtr == nullptr){
+
+            return true;
+		}else{
+
+		    return false;
+		}
 	}
 
 	//this method will print the list from front to back
 	void printList() const
 	{
 	    if(this->isEmpty()){std::cout<<"no Node no print"<<std::endl;
-	    return;
-	    }
+	    //return;
+	    }else{
 	    Node * currentNode = new Node();
 	    currentNode = startPtr;
-        std::cout<<"nullPtr<-"<<std::endl;
 	    while(currentNode !=nullptr){
             std::cout<< currentNode->data << "->";
             currentNode =currentNode->nextPtr;
 	    }
 	    std::cout<<"nullPtr"<<std::endl;
-
 	    delete currentNode;
+	    }
+
 	}
 
 };
