@@ -1,16 +1,16 @@
 #pragma once
 #include <iostream>
 #include "Node.h"
-
+template <typename T>
 class LinkedList {
 
 private:
-	Node *startPtr;
-	Node *endPtr;
+	Node<T> *startPtr;
+	Node<T> *endPtr;
 
 public:
 
-	LinkedList()
+	LinkedList<T>()
 	: startPtr(nullptr),
 	endPtr(nullptr)
 	{
@@ -25,7 +25,7 @@ public:
 			std::cout << "\n\n\n";
 	}
 
-	~LinkedList()
+	~LinkedList<T>()
 	{
 		std::cout << "\n\n\n";
 		std::cout << "\t   __________" << std::endl;
@@ -43,7 +43,7 @@ public:
 	//this method will return the size of the linked list
 	int size() {
 	    int counter =0;
-        Node * currentNode = new Node();
+        Node<T> * currentNode = new Node<T>();
 	    currentNode = startPtr;
 	    while(currentNode!=nullptr){
         currentNode = currentNode->nextPtr;
@@ -52,20 +52,20 @@ public:
 	}
 
 	//this method will return the first element in the list
-	int front() {
+	T front() {
 
 		std::cout<<"The first item in link list is :"<<startPtr->getData()<<std::endl;
 	}
 
 	//this method will return the Node in the back
-	int back() {
+	T back() {
 		std::cout<<"The last item in link list is :"<<endPtr->getData()<<std::endl;
 	}
 
 	//this method will add a Node to the end
-	void push_back(const int& value) {
+	void push_back(const T& value) {
 
-	    Node *nPtr = new Node(value);
+	    Node<T> *nPtr = new Node<T>(value);
 	    if(this->isEmpty()){
             nPtr->nextPtr = nullptr;
             nPtr->prevPtr = nullptr;
@@ -88,7 +88,7 @@ public:
 
 	//this method will remove the Node in the back
 	void pop_back() {
-        Node *nPtr = new Node();
+        Node *nPtr<T> = new Node<T>();
 	    if(this->isEmpty()){
 
             std::cout<<"No Node To Delete!!"<<std::endl;
@@ -109,9 +109,9 @@ public:
 	}
 
 	//this method will add a Node to the front
-	void push_front(const int& value) {
+	void push_front(const T& value) {
 
-	    Node *nPtr = new Node(value);
+	    Node<T> *nPtr = new Node<T>(value);
 	    if(this->isEmpty()){
             nPtr->nextPtr = nullptr;
             nPtr->prevPtr = nullptr;
@@ -137,7 +137,7 @@ public:
 	//this method will remove the Node in the front
 	void pop_front() {
 
-	    Node *nPtr = new Node();
+	    Node<T> *nPtr = new Node<T>();
 	    if(this->isEmpty()){
 
             std::cout<<"No Node To Delete!!"<<std::endl;
@@ -177,7 +177,7 @@ public:
 	    if(this->isEmpty()){std::cout<<"no Node no print"<<std::endl;
 	    //return;
 	    }else{
-	    Node * currentNode = new Node();
+	    Node<T> * currentNode = new Node<T>();
 	    currentNode = startPtr;
 	    while(currentNode !=nullptr){
             std::cout<< currentNode->data << "->";
