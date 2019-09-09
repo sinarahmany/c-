@@ -1,10 +1,9 @@
 # depslib dependency file v1.0
-1567969930 source:c:\work\c++(code blocks)\linklist\main.cpp
+1567973791 source:c:\work\c++(code blocks)\linklist\main.cpp
 	<iostream>
 	<iomanip>
 	<string>
 	<time.h>
-	<iomanip>
 	"LinkedList.h"
 	"Node.h"
 
@@ -12,5 +11,7 @@
 	<iostream>
 	"Node.h"
 
-1567705066 c:\work\c++(code blocks)\linklist\node.h
+1567974042 c:\work\c++(code blocks)\linklist\node.h
+	<iostream>
+	<iomanip>
 
