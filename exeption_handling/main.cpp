@@ -24,6 +24,8 @@ void caculate(double km ,double liters){
     void function2() {
     cout << "function3 is called inside function2" << endl;
     function3(); // stack unwinding occurs, return control to function1
+    }catch (exception &ex){
+        cout<< "exception handled in function "<<endl;
     }
     // function1 invokes function2
     void function1() {

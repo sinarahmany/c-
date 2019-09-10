@@ -10,7 +10,7 @@ void menu();
 int main() {
 
 	//linked list created
-	LinkedList list;
+	LinkedList<double> list;
 
 	//selection for menu
 	//value for node data

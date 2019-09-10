@@ -46,7 +46,7 @@ public:
         Node<T> * currentNode = new Node<T>();
 	    currentNode = startPtr;
 	    while(currentNode!=nullptr){
-        currentNode = currentNode->nextPtr;
+        currentNode = currentNode->getNextPtr();
         counter=counter+1;}
         std::cout<<"The size of the list is : "<<counter<<std::endl;
 	}
@@ -67,8 +67,8 @@ public:
 
 	    Node<T> *nPtr = new Node<T>(value);
 	    if(this->isEmpty()){
-            nPtr->nextPtr = nullptr;
-            nPtr->prevPtr = nullptr;
+            nPtr->setNextPtr (nullptr);
+            nPtr->setPrevPtr (nullptr);
             startPtr = nPtr;
             endPtr =nPtr;
 	    }else{
@@ -77,9 +77,9 @@ public:
 //                free(startPtr);
 //	        }
 
-	        nPtr->prevPtr= endPtr;
-	        nPtr->nextPtr= nullptr;
-	        endPtr->nextPtr = nPtr;
+	        nPtr->setNextPtr (nullptr);
+            nPtr->setPrevPtr (endPtr);
+            endPtr->setNextPtr (nPtr);
             endPtr = nPtr;
 
 	    }
@@ -88,7 +88,7 @@ public:
 
 	//this method will remove the Node in the back
 	void pop_back() {
-        Node *nPtr<T> = new Node<T>();
+        Node<T> *nPtr = new Node<T>();
 	    if(this->isEmpty()){
 
             std::cout<<"No Node To Delete!!"<<std::endl;
@@ -98,8 +98,8 @@ public:
                 free(startPtr);
 	        }else{
 
-	        nPtr = endPtr->prevPtr;
-	        nPtr->nextPtr = nullptr;
+	        nPtr = endPtr->getPrevPtr();
+	        nPtr->setNextPtr (nullptr);
 	        free (endPtr);
 	        endPtr = nPtr;
 	        }
@@ -113,8 +113,8 @@ public:
 
 	    Node<T> *nPtr = new Node<T>(value);
 	    if(this->isEmpty()){
-            nPtr->nextPtr = nullptr;
-            nPtr->prevPtr = nullptr;
+            nPtr->setNextPtr (nullptr);
+            nPtr->setPrevPtr (nullptr);
             startPtr = nPtr;
             endPtr =nPtr;
 	    }else{
@@ -123,9 +123,9 @@ public:
 //                free(startPtr);
 //	        }else{
 
-	        nPtr->nextPtr= startPtr;
-	        nPtr->prevPtr= nullptr;
-	        startPtr->prevPtr = nPtr;
+	        nPtr->setNextPtr (startPtr);
+	        nPtr->setPrevPtr (nullptr);
+	        startPtr->setPrevPtr (nPtr);
             startPtr = nPtr;
 
 
@@ -143,8 +143,8 @@ public:
             std::cout<<"No Node To Delete!!"<<std::endl;
 	    }else{
 
-	        nPtr = startPtr->nextPtr;
-	        nPtr->prevPtr = nullptr;
+	        nPtr = startPtr->getNextPtr();
+	        nPtr->setPrevPtr (nullptr);
 	        free (startPtr);
 	        startPtr = nPtr;
 
@@ -180,8 +180,8 @@ public:
 	    Node<T> * currentNode = new Node<T>();
 	    currentNode = startPtr;
 	    while(currentNode !=nullptr){
-            std::cout<< currentNode->data << "->";
-            currentNode =currentNode->nextPtr;
+            std::cout<< currentNode->getData() << "->";
+            currentNode =currentNode->getNextPtr();
 	    }
 	    std::cout<<"nullPtr"<<std::endl;
 	    delete currentNode;
