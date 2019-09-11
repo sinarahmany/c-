@@ -30,7 +30,7 @@ public:
 
 template <typename T>
 Node<T>::Node() // default constructor implementation
-: Node(NULL) //delegated constructor
+//: Node(NULL) //delegated constructor // string will not work with null value
 {
 }
 
