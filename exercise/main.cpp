@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+
 using namespace std;
 
 
@@ -21,5 +22,17 @@ int main()
     //erase
     vectring.erase(vectring.begin());
     printvector(vectring);
-
+    cout<<"\n\n";
+    vector<pair<string,double>> myMarks{
+        {"sia",99.99},
+        {"sina",0.0},
+        {"Taylor",-100.5}
+    };
+    for(auto item : myMarks){
+        if(item.second<0){cout<< item.first<<"->"<<"minus "<<(item.second*(-1))<<endl ;}
+        else{
+            cout<< item.first<<"->"<<item.second<<endl ;
+        }
+    }
+    cout<<""<<endl;
 }
