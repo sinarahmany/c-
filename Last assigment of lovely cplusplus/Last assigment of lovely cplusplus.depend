@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1568403646 source:c:\work\c++(code blocks)\last assigment of lovely cplusplus\main.cpp
+	<cctype>
+	<deque>
+	<iostream>
+	<string>
+	<vector>
+	<iomanip>
+	<deque>
+

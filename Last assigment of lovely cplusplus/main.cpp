@@ -7,12 +7,22 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+#include <deque>
+
+using namespace std;
+
 
 bool is_palindrome(const std::string& s)
 {
     // You must implement this function.
     // Since we are learning the STL - use a deque to solve the problem.
-    return false;
+    std::deque<char> CheckDeque;
+    for(auto i : s ){if(isalpha(i)){CheckDeque.push_back(toupper(i));}
+    }
+    for(int i=0;i<CheckDeque.size(); i++){
+        if(CheckDeque.at(i)==CheckDeque.back()){return true;}
+        else{ return false;}
+    }
 }
 
 int main()
@@ -24,7 +34,7 @@ int main()
     std::cout << std::boolalpha;
     std::cout << std::setw(8) << std::left << "Result" << "String" << std::endl;
     for(const auto& s : test_strings) {
-        std::cout << std::setw(8) << std::left << is_palindrome(s)  << s << std::endl;
+        std::cout << std::setw(8) << std::left << is_palindrome(s)<< s  << std::endl;
     }
     std::cout << std::endl;
     return 0;
