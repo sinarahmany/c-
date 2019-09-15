@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1568525415 source:c:\work\c++(code blocks)\assigment9sina\main.cpp
+	<iostream>
+	<stdexcept>
+	<vector>
+	<string>
+	<stdio.h>
+	<time.h>
+	"Date.h"
+
+1568525415 c:\work\c++(code blocks)\assigment9sina\include\date.h
+	<stdio.h>
+	<iostream>
+	<string>
+
+1568525424 source:c:\work\c++(code blocks)\assigment9sina\src\date.cpp
+	"Date.h"
+	<string>
+	<time.h>
+	<stdexcept>
+
