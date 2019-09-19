@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1568826675 source:c:\work\c++(code blocks)\set\main.cpp
+	<iostream>
+	<set>
+	<unordered_set>
+
