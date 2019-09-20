@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1569006282 source:c:\work\c++(code blocks)\final\main.cpp
+	<iostream>
+	<string>
+	"Car.h"
+	"Engine.h"
+	"Plane.h"
+	"Bike.h"
+
+1569006555 source:c:\work\c++(code blocks)\final\src\bike.cpp
+	"Bike.h"
+
+1569006517 c:\work\c++(code blocks)\final\include\bike.h
+	"Engine.h"
+	<iostream>
+	<string>
+
+1569004968 c:\work\c++(code blocks)\final\include\engine.h
+	<iostream>
+	<string>
+
+1569004968 source:c:\work\c++(code blocks)\final\src\engine.cpp
+	"Engine.h"
+
+1569006674 source:c:\work\c++(code blocks)\final\src\car.cpp
+	"Car.h"
+
+1569006293 c:\work\c++(code blocks)\final\include\car.h
+	"Engine.h"
+	<iostream>
+	<string>
+
+1568999944 source:c:\work\c++(code blocks)\final\src\plane.cpp
+	"Plane.h"
+
+1569009303 c:\work\c++(code blocks)\final\include\plane.h
+	"Engine.h"
+	<iostream>
+	<string>
+
