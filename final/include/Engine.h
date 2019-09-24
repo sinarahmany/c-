@@ -19,12 +19,17 @@ class Engine
         void setCylinder (int Cylinder);
         int getHorsePower();
         void setHorsePower (int HorsePower);
+        //copy constructor
+        Engine(Engine const &obj);
         //virtual added before functions so that we can override them
         virtual void showEngineType()=0;
         virtual void showCylinders()=0;
         virtual void showHP()=0;
+
+        void toString();
         //destractor
-        ~Engine();
+        virtual ~Engine(){};
+
 
     protected:
 

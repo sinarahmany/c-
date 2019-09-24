@@ -12,6 +12,7 @@ class Plane : public Engine
     public:
         //default constructor
         Plane();
+        Plane(int numberOfEngines,int LiftLoad);
         //overloaded constructor
         Plane(int Cylinder,int HorsePower,string Engine_Type,int numberOfEngines,int LiftLoad);
 
